@@ -1,6 +1,6 @@
 # 100 Days of JavaScript Challenge
 
-## 6 Reasons to complete this challenge.
+## 6 Reasons to complete this challenge :
 
 ### :heavy_check_mark: You'll Gain Lots of Experience
 - Many fellow developers ask, “Am I good enough?” “Have I done enough projects?” “Do I really know JavaScript?” Well, after doing each of the 100+ JavaScript projects for beginners by yourself, you shouldn't have to worry about any of these questions. You'll certainly be better than many of your peers when coding JavaScript.
