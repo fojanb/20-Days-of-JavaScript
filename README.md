@@ -3,7 +3,7 @@
 ## 6 Reasons to complete this challenge :
 
 ### :heavy_check_mark: You'll Gain Lots of Experience
-[1] - Many fellow developers ask, “Am I good enough?” “Have I done enough projects?” “Do I really know JavaScript?” Well, after doing each of the 100+ JavaScript projects for beginners by yourself, you shouldn't have to worry about any of these questions. You'll certainly be better than many of your peers when coding JavaScript.
+* Many fellow developers ask, “Am I good enough?” “Have I done enough projects?” “Do I really know JavaScript?” Well, after doing each of the 100+ JavaScript projects for beginners by yourself, you shouldn't have to worry about any of these questions. You'll certainly be better than many of your peers when coding JavaScript.
 
 ### :heavy_check_mark: You'll Gain a Strong Sense of Achievement
 - After you've completed at least 100 projects on this list of JavaScript projects for beginners, you can say without a doubt that you've built at least 100 small to medium sized, working applications. Technical recruiters will love to hear this when they are looking to fill junior to mid-level JavaScript Developer roles.
