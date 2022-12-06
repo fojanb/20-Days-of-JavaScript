@@ -1,7 +1,7 @@
 # 100 Days of JavaScript Challenge
 ## 6 Reasons to complete this challenge :
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" width="150">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" width="50">
 </p>
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg)
 ### :heavy_check_mark: You'll Gain Lots of Experience
