@@ -1,6 +1,4 @@
-# 100 Days of JavaScript Challenge <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" width="50">
-</p>
+# 100 Days of JavaScript Challenge <span align="left"><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" width="50"></span>
 ## 6 Reasons to complete this challenge :
 
 ### :heavy_check_mark: You'll Gain Lots of Experience
