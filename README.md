@@ -1,7 +1,7 @@
 # 100 Days of JavaScript Challenge
 
 ## 6 Reasons to complete this challenge :
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![This is an image]([https://myoctocat.com/assets/images/base-octocat.svg](https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F9%2F99%2FUnofficial_JavaScript_logo_2.svg%2F480px-Unofficial_JavaScript_logo_2.svg.png&imgrefurl=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AUnofficial_JavaScript_logo_2.svg&tbnid=2oun5vBth5ILkM&vet=12ahUKEwjV7a633uX7AhVVIn0KHYW6DXwQMygDegUIARDCAQ..i&docid=GB1wmVpYYA5T0M&w=480&h=480&q=js%20icon%20svg&ved=2ahUKEwjV7a633uX7AhVVIn0KHYW6DXwQMygDegUIARDCAQ))
 ### :heavy_check_mark: You'll Gain Lots of Experience
 * Many fellow developers ask, “Am I good enough?” “Have I done enough projects?” “Do I really know JavaScript?” Well, after doing each of the 100+ JavaScript projects for beginners by yourself, you shouldn't have to worry about any of these questions. You'll certainly be better than many of your peers when coding JavaScript.
 
