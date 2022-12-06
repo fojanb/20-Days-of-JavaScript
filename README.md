@@ -1,4 +1,4 @@
-# 100-Days-of-JavaScript
+# 100 Days of JavaScript
 
 ## 6 Reasons to complete these 100+ JavaScript projects.
 
