@@ -1,4 +1,4 @@
-# 100 Days of JavaScript Challange
+# 100 Days of JavaScript Challenge
 
 ## 6 Reasons to complete these 100+ JavaScript projects.
 
