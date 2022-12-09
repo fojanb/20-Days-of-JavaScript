@@ -5,9 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <title>Tip Calculator</title>
   </head>
   <body>
+    <div class="container">
+      <header>TIP CALCULATOR</header>
+      <div class="bill">
+        <span>How much was your bill?</span><input type="text" required/>
+      </div>
+      <div class="headCount">
+        <span>How many people sharing the bill?</span><input type="text" required/>
+      </div>
+      <div class="service">
+        <span>How was your service?</span><input type="text" placeholder="Choose..." required/>
+      </div>
+      <button>CALCULATE</button>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
