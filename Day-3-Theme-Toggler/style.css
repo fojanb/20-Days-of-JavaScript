@@ -1,0 +1,26 @@
+html {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+body {
+  background-color: #292c35;
+}
+.toggler {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  width: 50px;
+  margin: 20% auto;
+  background-color: black;
+  color: aliceblue;
+  padding: 10px;
+}
+.toggler svg {
+  cursor: pointer;
+}
+.sun {
+  background-color: white;
+}
+
