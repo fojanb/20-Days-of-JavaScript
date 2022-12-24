@@ -7,4 +7,6 @@
 - JavaScript CSS Manipulation
 - JavaScript DOM Manipulation
 ### :heavy_check_mark: Intermediate JavaScript project
+
+
 Happy coding! (^_^)
