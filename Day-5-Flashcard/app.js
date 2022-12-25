@@ -9,7 +9,7 @@ const saveToLocalStorage = () => {
   localStorage.setItem("data", JSON.stringify(data.questions));
 };
 const createFlashCard = (questions) => {
-  questions.forEach(question => {
+  questions.forEach((question) => {
     const flashCard = document.createElement("div");
     flashCard.classList.add("flashCard");
     flashCard.innerHTML = `
@@ -19,10 +19,10 @@ const createFlashCard = (questions) => {
       .querySelector(".showHide")
       .addEventListener(
         "click",
-        (e) => (e.target.innerHTML = `<p style="color:whitesmoke;">${question.A}</p>`)
+        (e) =>
+          (e.target.innerHTML = `<p style="color:whitesmoke;">${question.A}</p>`)
       );
   });
-
 };
 const saveBtn = (e, q, a, question, answer) => {
   e.preventDefault();
@@ -31,7 +31,7 @@ const saveBtn = (e, q, a, question, answer) => {
     alert("Please provide both answer and question.");
   } else {
     saveToLocalStorage();
-    createFlashCard(data.questions);
+    createFlashCard([{ Q: q, A: a }]);
     question.value = "";
     answer.value = "";
   }
@@ -69,7 +69,7 @@ const fetchQuestions = () => {
     return;
   }
   data.questions.push(...currentQuestions);
-  createFlashCard(data.questions)
+  createFlashCard(data.questions);
 };
 window.addEventListener("load", () => {
   data.add.addEventListener("click", makeCard);
