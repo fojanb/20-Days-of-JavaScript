@@ -13,7 +13,7 @@ const createFlashCard = (questions) => {
     const flashCard = document.createElement("div");
     flashCard.classList.add("flashCard");
     flashCard.innerHTML = `
-      <p>${question.Q}</p><p class="showHide" style="color:blue;cursor:pointer;">Show/Hide Answer</p>`;
+      <p>${question.Q}</p><p class="showHide" style="color:#2196f3;cursor:pointer;">Show/Hide Answer</p>`;
     document.querySelector(".flashCards").append(flashCard);
     document
       .querySelector(".showHide")
@@ -32,7 +32,6 @@ const saveBtn = (e, q, a, question, answer) => {
   } else {
     saveToLocalStorage();
     createFlashCard(data.questions);
-    // ---------------------
     question.value = "";
     answer.value = "";
   }
@@ -71,7 +70,6 @@ const fetchQuestions = () => {
   }
   data.questions.push(...currentQuestions);
   createFlashCard(data.questions)
-  // console.log(data.questions);
 };
 window.addEventListener("load", () => {
   data.add.addEventListener("click", makeCard);

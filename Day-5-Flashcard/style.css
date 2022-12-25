@@ -34,7 +34,7 @@ body {
 .form {
   position: relative;
   display: block;
-  border: 1px dashed rgb(148, 121, 73);
+  border: 1px solid #6068b2;
   border-radius: 5px;
   width: 30%;
   padding: 20px;
@@ -66,7 +66,7 @@ body {
   margin: 30px;
 }
 .flashCard{
-  border: 1px dashed rgb(148, 121, 73);
+  border: 1px solid #6068b2;
   border-radius: 5px;
   width: 20%;
   padding: 20px;
