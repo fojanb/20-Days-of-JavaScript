@@ -1,5 +1,5 @@
  ### :heavy_check_mark: What you should see.
--  You will be able to make cards in your imaginary flashcard box.
+-  You will be able to make cards and save it onto your imaginary flashcard box.
 ### :heavy_check_mark: JavaScript Used
 - Object Oriented JavaScript
 - JavaScript Constructor Functions

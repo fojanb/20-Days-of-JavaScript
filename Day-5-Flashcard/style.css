@@ -1,0 +1,73 @@
+html {
+  box-sizing: border-box;
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+body {
+  background-color: #2b2d42;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin: 30px;
+}
+.container * {
+  margin: 10px;
+  color: whitesmoke;
+}
+.container button {
+  background-color: #006f57;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: inherit;
+}
+.container button:hover {
+  cursor: pointer;
+  background-color: #2a8370;
+}
+.container .title {
+  font-size: 30px;
+}
+.form {
+  position: relative;
+  border: 1px dashed rgb(148, 121, 73);
+  border-radius: 5px;
+  width: 30%;
+  padding: 20px;
+}
+.form * {
+  margin: 10px auto;
+  border-radius: 5px;
+}
+.form span {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  color: rgb(197, 173, 159);
+}
+.form span:hover {
+  color: rgb(189, 38, 4);
+  cursor: pointer;
+}
+.form textarea {
+  color: #2b2d42;
+}
+.flashCards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: whitesmoke;
+  margin: 30px;
+}
+.flashCard{
+  border: 1px dashed rgb(148, 121, 73);
+  border-radius: 5px;
+  width: 20%;
+  padding: 20px;
+  margin: 10px;
+}
