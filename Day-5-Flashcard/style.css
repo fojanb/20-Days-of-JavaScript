@@ -33,6 +33,7 @@ body {
 }
 .form {
   position: relative;
+  display: block;
   border: 1px dashed rgb(148, 121, 73);
   border-radius: 5px;
   width: 30%;
@@ -70,4 +71,7 @@ body {
   width: 20%;
   padding: 20px;
   margin: 10px;
+}
+.hide{
+  display: none;
 }
