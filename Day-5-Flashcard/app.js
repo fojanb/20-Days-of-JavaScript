@@ -1,40 +1,43 @@
 const data = {
   add: document.querySelector("#add"),
   newCard: document.createElement("form"),
-  question:"",
-  answer:"",
-  save: (e,q,a,question,answer) => {
+  question: "",
+  answer: "",
+  save: (e, q, a, question, answer) => {
     e.preventDefault();
     const flashCard = document.createElement("div");
-    if(q === "" ||a === ""){
+    if (q === "" || a === "") {
       flashCard.classList.add("hide");
-      alert("Please make sure that both answer and question are included.")
+      alert("Please provide both answer and question.");
       return;
     }
     flashCard.classList.add("flashCard");
-    flashCard.innerHTML = `<p>${q}</p><p>${a}</p>`;
+    flashCard.innerHTML = `<p>${q}</p><p id="showHide" style="color:blue;cursor:pointer;
+    ">Show/Hide Answer</p>`;
     document.querySelector(".flashCards").append(flashCard);
-    question.value="";
-    answer.value="";
-    data.question="";
-    data.answer="";
+    document
+      .querySelector("#showHide")
+      .addEventListener("click", (e) => e.target.innerHTML = `<p style="color:whitesmoke;">${a}</p>`);
+    question.value = "";
+    answer.value = "";
+    data.question = "";
+    data.answer = "";
   },
   close: (e) => {
     e.preventDefault();
     e.target.parentNode.classList.add("hide");
   },
 };
-
 const makeCard = () => {
   data.newCard.classList.remove("hide");
   data.newCard.classList.add("form");
   data.newCard.innerHTML = `
-            <span id="close">&times;</span>
-            <lable for="question">Question</lable>
-            <textarea id="question" style="height:100px;width: 90%;" value=""></textarea>
-            <lable for="answer">Answer</lable>
-            <textarea id="answer" style="height:100px;width: 90%;" value=""></textarea>
-            <button id="save" style="width:30%;">Save</button>
+      <span id="close">&times;</span>
+      <lable for="question">Question</lable>
+      <textarea id="question" style="height:100px;width: 90%;" value=""></textarea>
+      <lable for="answer">Answer</lable>
+      <textarea id="answer" style="height:100px;width: 90%;" value=""></textarea>
+      <button id="save" style="width:30%;">Save</button>
         `;
   document.querySelector(".container").append(data.newCard);
   const close = document.querySelector("#close");
@@ -42,8 +45,10 @@ const makeCard = () => {
   const answer = document.querySelector("#answer");
   const save = document.querySelector("#save");
   close.addEventListener("click", (e) => data.close(e));
-  question.addEventListener("change", (e) => data.question = e.target.value);
-  answer.addEventListener("change", (e) => data.answer = e.target.value);
-  save.addEventListener("click", (e) => data.save(e,data.question,data.answer,question,answer));
+  question.addEventListener("change", (e) => (data.question = e.target.value));
+  answer.addEventListener("change", (e) => (data.answer = e.target.value));
+  save.addEventListener("click", (e) =>
+    data.save(e, data.question, data.answer, question, answer)
+  );
 };
 data.add.addEventListener("click", makeCard);
