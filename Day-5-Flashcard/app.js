@@ -13,7 +13,7 @@ const createFlashCard = (questions) => {
     const flashCard = document.createElement("div");
     flashCard.classList.add("flashCard");
     flashCard.innerHTML = `
-      <p>${question.Q}</p><p class="showHide" style="color:#2196f3;cursor:pointer;">Show/Hide Answer</p>`;
+      <div>${question.Q}</div><div class="showHide" style="color:#2196f3;cursor:pointer;">Show/Hide Answer</div>`;
     document.querySelector(".flashCards").append(flashCard);
     document
       .querySelector(".showHide")

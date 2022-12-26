@@ -66,12 +66,29 @@ body {
   margin: 30px;
 }
 .flashCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   border: 1px solid #6068b2;
   border-radius: 5px;
   width: 20%;
+  height: 100px;
   padding: 20px;
   margin: 10px;
+  flex-wrap: wrap;
 }
 .hide{
   display: none;
+}
+@media (max-width: 1200px) {
+  .flashCard {
+    width: 40%;
+  }
+}
+@media (max-width: 600px) {
+  .flashCard {
+    width: 100%;
+    font-size: medium;
+  }
 }
