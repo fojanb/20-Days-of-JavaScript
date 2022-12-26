@@ -31,12 +31,15 @@ body {
 .holder {
   display: flex;
   flex-direction: column;
-  width: 5px;
+  width: 10px;
   height: 200px;
   background-color: #161723;
   padding: 5px;
   align-items: center;
-  margin: 0 auto;
+  margin: -10px auto;
+  z-index: -100;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 .red {
   background-color: red;
@@ -54,7 +57,7 @@ body {
   border: none;
 }
 .off {
-  background-color: #000000;
+  background-color: #161723;
   box-shadow: none;
   
 }
