@@ -1,7 +1,6 @@
 html {
   box-sizing: border-box;
-  font-family: monospace;
-  font-size: 1.1rem;
+  font-family: 'Open Sans', sans-serif;
 }
 body {
   background-color: #2b2d42;
@@ -80,6 +79,10 @@ body {
 }
 .hide{
   display: none;
+}
+.hoverable:hover{
+  color: #bbcbd8;
+
 }
 @media (max-width: 1200px) {
   .flashCard {

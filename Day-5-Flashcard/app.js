@@ -15,7 +15,7 @@ const createFlashCard = (questions) => {
     flashCard.innerHTML = `
       <div>${question.Q}</div><div class="showHide" style="color:#2196f3;cursor:pointer;">Show/Hide Answer</div>`;
     document.querySelector(".flashCards").append(flashCard);
-    document
+    flashCard
       .querySelector(".showHide")
       .addEventListener(
         "click",
