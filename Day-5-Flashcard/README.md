@@ -1,4 +1,4 @@
- ### :heavy_check_mark: What you should see.
+### :heavy_check_mark: What you should see.
 -  You will be able to make cards and save it onto your imaginary flashcard box.
 ### :heavy_check_mark: JavaScript Used
 - Object Oriented JavaScript
@@ -6,6 +6,7 @@
 - JavaScript Prototypal Inheritance
 - JavaScript CSS Manipulation
 - JavaScript DOM Manipulation
+- Browser Database : LocalStorage
 ### :heavy_check_mark: Intermediate JavaScript project
 
 
