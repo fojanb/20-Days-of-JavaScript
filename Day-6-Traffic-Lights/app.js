@@ -3,7 +3,6 @@ const data = {
   yellow: document.querySelector("#yellow"),
   green: document.querySelector("#green"),
 };
-
   setInterval(() => {
     data.red.classList.add("red");
   }, 1000);
@@ -12,15 +11,15 @@ const data = {
   }, 2000);
   setInterval(() => {
     data.yellow.classList.add("yellow");
-  }, 3000);
+  }, 2000);
   setInterval(() => {
     data.yellow.classList.add("off");
-  }, 4000);
+  }, 3000);
   setInterval(() => {
     data.green.classList.add("green");
-  }, 5000);
+  }, 3000);
   setInterval(() => {
     data.green.classList.add("off");
-  }, 6000);
+  }, 4000);
  
 
