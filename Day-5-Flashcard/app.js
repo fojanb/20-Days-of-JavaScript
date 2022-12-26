@@ -13,10 +13,10 @@ const createFlashCard = (questions) => {
     const flashCard = document.createElement("div");
     flashCard.classList.add("flashCard");
     flashCard.innerHTML = `
-      <div>${question.Q}</div><div class="showHide" style="color:#2196f3;cursor:pointer;">Show/Hide Answer</div>`;
+      <div>${question.Q}</div><div class="show" style="color:#2196f3;cursor:pointer;">Show Answer</div>`;
     document.querySelector(".flashCards").append(flashCard);
     flashCard
-      .querySelector(".showHide")
+      .querySelector(".show")
       .addEventListener(
         "click",
         (e) =>
