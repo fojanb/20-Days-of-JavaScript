@@ -3,7 +3,7 @@ const data = {
   yellow: document.querySelector("#yellow"),
   green: document.querySelector("#green"),
 };
-let repeat = 100;
+
   setInterval(() => {
     data.red.classList.add("red");
   }, 1000);

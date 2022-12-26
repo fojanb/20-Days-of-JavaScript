@@ -4,6 +4,8 @@
 - Object Oriented JavaScript
 - setInterval()
 - Asynchronous(non-blocking) vs Synchronous(blocking)
+- Calling multiple setInterval() functions in js with a for loop?:
+** setInterval has a delay which means when the interval runs the loop is already been finish
 ### :heavy_check_mark: Intermediate JavaScript project
 
 
