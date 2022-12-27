@@ -6,7 +6,7 @@
     The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
 - setTimeOut() : 
     The global setTimeout() method sets a timer which executes a function or 
-    specified piece of code once the timer expires. In other wrods, it creates a delay in our code.
+    specified piece of code once the timer expires. In other wrods, it creates a delay in our code(Synchronous(blocking) architecture).
 - Comprehend Asynchronous(non-blocking) vs Synchronous(blocking)
 - Hint : Calling multiple setInterval() functions in js with a for loop?:
 ** setInterval has a delay which means when the interval runs the loop is already been finish. For loop is blocking and setInterval is non-blocking.
