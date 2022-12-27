@@ -17,7 +17,7 @@ html {
   border-radius: 10px;
 }
 .container header {
-  background-color: #3e1f47;
+  background-color: #312244;
   text-align: center;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -65,6 +65,18 @@ html {
 select {
   border: none;
   outline: none;
+}
+.headCount{
+  position: relative;
+}
+.headCount i {
+  position: absolute;
+  bottom: 0;
+}
+
+.icon {
+  padding: 10px;
+  min-width: 20px;
 }
 form select {
   border-radius: 5px;

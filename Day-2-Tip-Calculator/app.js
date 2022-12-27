@@ -8,6 +8,9 @@ const data = {
   persons: 0,
   tip: 0,
 };
+data.personsInput.addEventListener("focus", (e) => {
+  e.target.parentNode.querySelector("i").style.display = "none";
+});
 let holder = document.createElement("div");
 const billFunction = () => {
   data.billInput.addEventListener("change", (e) => {

@@ -12,6 +12,11 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Tip Calculator</title>
   </head>
   <body>
@@ -19,11 +24,12 @@
       <header>TIP CALCULATOR</header>
       <div class="bill">
         <span>How much was your bill?</span>
-        <input type="text" value="" id="billAmount" required />
+        <input type="text" value="" id="billAmount" placeholder="$" required />
       </div>
       <div class="headCount">
-        <span>How many people sharing the bill?</span
-        ><input type="text" value="" id="persons" required />
+        <span>How many people sharing the bill?</span>
+        <i class="fa fa-user icon"></i>
+        <input type="text" value="" id="persons" required />
       </div>
       <div class="service">
         <div class="headCount">How was your service?</div>

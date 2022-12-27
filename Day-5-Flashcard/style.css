@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 body {
   background-color: #2b2d42;
@@ -55,7 +55,7 @@ body {
 .form textarea {
   color: #2b2d42;
 }
-.flashCards{
+.flashCards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -64,7 +64,7 @@ body {
   color: whitesmoke;
   margin: 30px;
 }
-.flashCard{
+.flashCard {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -72,21 +72,27 @@ body {
   border: 1px solid #6068b2;
   border-radius: 5px;
   width: 20%;
-  height: 100px;
+  height: 100%;
   padding: 20px;
   margin: 10px;
-  flex-wrap: wrap;
 }
-.hide{
+.hide {
   display: none;
 }
-.hoverable:hover{
+.hoverable:hover {
   color: #bbcbd8;
-
 }
-@media (max-width: 1200px) {
+.show{
+  color:#2196f3;
+  cursor:pointer;
+}
+.answer {
+  color: #be95c4;
+  margin-top: 10px;
+}
+@media (max-width: 1200px) and (min-width: 1200px) {
   .flashCard {
-    width: 40%;
+    width: 100%;
   }
 }
 @media (max-width: 600px) {

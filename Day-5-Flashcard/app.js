@@ -13,15 +13,11 @@ const createFlashCard = (questions) => {
     const flashCard = document.createElement("div");
     flashCard.classList.add("flashCard");
     flashCard.innerHTML = `
-      <div>${question.Q}</div><div class="show" style="color:#2196f3;cursor:pointer;">Show Answer</div>`;
+      <div>${question.Q}</div><div class="show">Show Answer</div>`;
     document.querySelector(".flashCards").append(flashCard);
-    flashCard
-      .querySelector(".show")
-      .addEventListener(
-        "click",
-        (e) =>
-          (e.target.innerHTML = `<p style="color:whitesmoke;">${question.A}</p>`)
-      );
+    flashCard.querySelector(".show").addEventListener("click", (e) => {
+      e.target.innerHTML = `<div class="answer">${question.A}</div>`;
+    });
   });
 };
 const saveBtn = (e, q, a, question, answer) => {
