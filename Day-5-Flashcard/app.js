@@ -16,11 +16,15 @@ const createFlashCard = (question) => {
   flashCard.innerHTML = `
       <div>${question.Q}</div>
       <div class="show">Show/Hide Answer</div>
-      <div class="answer">${question.A}</div>`;
+      <div id="answer-${question.id}" class="answer">${question.A}</div>`;
+
   document.querySelector(".flashCards").append(flashCard);
-  document.querySelector(".show").addEventListener("click", (e) => {
-    console.log("hi");
-  });
+  document
+    .getElementById(`${question.id}`)
+    .querySelector(".show")
+    .addEventListener("click", () => {
+      document.getElementById(`answer-${question.id}`).classList.toggle("showAnswer");
+    });
 };
 const saveBtn = (e, q, a, question, answer) => {
   e.preventDefault();
