@@ -4,33 +4,36 @@ const data = {
   question: "",
   answer: "",
   questions: [],
+  index: 0,
 };
 const saveToLocalStorage = () => {
   localStorage.setItem("data", JSON.stringify(data.questions));
 };
-const createFlashCard = (questions) => {
-  questions.forEach((question) => {
-    const flashCard = document.createElement("div");
-    flashCard.classList.add("flashCard");
-    flashCard.innerHTML = `
-      <div>${question.Q}</div><div class="show">Show Answer</div>`;
-    document.querySelector(".flashCards").append(flashCard);
-    flashCard.querySelector(".show").addEventListener("click", (e) => {
-      e.target.innerHTML = `<div class="answer">${question.A}</div>`;
-    });
+const createFlashCard = (question) => {
+  const flashCard = document.createElement("div");
+  flashCard.classList.add("flashCard");
+  flashCard.setAttribute("id", question.id);
+  flashCard.innerHTML = `
+      <div>${question.Q}</div>
+      <div class="show">Show/Hide Answer</div>
+      <div class="answer">${question.A}</div>`;
+  document.querySelector(".flashCards").append(flashCard);
+  document.querySelector(".show").addEventListener("click", (e) => {
+    console.log("hi");
   });
 };
 const saveBtn = (e, q, a, question, answer) => {
   e.preventDefault();
-  data.questions.push({ Q: q, A: a });
-  if (q === "" || a === "") {
+  if (question.value === "" || answer.value === "") {
     alert("Please provide both answer and question.");
   } else {
+    data.questions.push({ Q: q, A: a, id: data.index });
     saveToLocalStorage();
-    createFlashCard([{ Q: q, A: a }]);
+    createFlashCard({ Q: q, A: a, id: data.index });
     question.value = "";
     answer.value = "";
   }
+  data.index = data.index + 1;
 };
 const closeBtn = (e) => {
   e.preventDefault();
@@ -65,7 +68,7 @@ const fetchQuestions = () => {
     return;
   }
   data.questions.push(...currentQuestions);
-  createFlashCard(data.questions);
+  data.questions.forEach((question) => createFlashCard(question));
 };
 window.addEventListener("load", () => {
   data.add.addEventListener("click", makeCard);

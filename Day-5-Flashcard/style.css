@@ -87,8 +87,16 @@ body {
   cursor:pointer;
 }
 .answer {
+  display: none;
   color: #be95c4;
   margin-top: 10px;
+}
+.showAnswer{
+  display: block;
+
+}
+.answerBtn{
+  margin-right: 10px;
 }
 @media (max-width: 1200px) and (min-width: 1200px) {
   .flashCard {
