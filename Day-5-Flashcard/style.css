@@ -14,7 +14,7 @@ body {
 }
 .container * {
   margin: 10px;
-  color: whitesmoke;
+  color: #f2f2f2;
 }
 .container button {
   background-color: #006f57;
@@ -82,21 +82,47 @@ body {
 .hoverable:hover {
   color: #bbcbd8;
 }
-.show{
-  color:#2196f3;
-  cursor:pointer;
+.show {
+  color: #2196f3;
+  cursor: pointer;
+  margin-top: 10px;
 }
 .answer {
   display: none;
-  color: #be95c4;
   margin-top: 10px;
 }
-.showAnswer{
+.showAnswer {
   display: block;
-
 }
-.answerBtn{
+.answerBtn {
   margin-right: 10px;
+}
+.edit {
+  background-color: #2b2d42;
+  border: 2px solid #234a87;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: inherit;
+  color: inherit;
+  padding: 5px;
+}
+.delete {
+  background-color: #2b2d42;
+  border: 2px solid rgb(135, 35, 40);
+  border-radius: 5px;
+  padding: 10px;
+  font-family: inherit;
+  color: inherit;
+  padding: 5px;
+  margin-right:5px;
+}
+.edit:hover {
+  background-color: #203049;
+  cursor: pointer;
+}
+.delete:hover {
+  background-color: #3a1435;
+  cursor: pointer;
 }
 @media (max-width: 1200px) and (min-width: 1200px) {
   .flashCard {

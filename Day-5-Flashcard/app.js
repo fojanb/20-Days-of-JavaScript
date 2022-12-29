@@ -6,8 +6,8 @@ const data = {
   questions: [],
   index: 0,
 };
-const saveToLocalStorage = () => {
-  localStorage.setItem("data", JSON.stringify(data.questions));
+const saveToLocalStorage = (assets) => {
+  localStorage.setItem("data", JSON.stringify(assets));
 };
 const createFlashCard = (question) => {
   const flashCard = document.createElement("div");
@@ -16,14 +16,33 @@ const createFlashCard = (question) => {
   flashCard.innerHTML = `
       <div>${question.Q}</div>
       <div class="show">Show/Hide Answer</div>
-      <div id="answer-${question.id}" class="answer">${question.A}</div>`;
-
+      <div id="answer-${question.id}" class="answer">${question.A}</div>
+      <div style="display:flex;flex-direction:row;justify-content:space-between;align-items:center;margin-top:10px;">
+        <input id="delete-${question.id}" value="DELETE" type="button" class="delete"/>
+        <input id="edit-${question.id}" value="EDIT" type="button" class="edit"/>
+      </div>
+      `;
   document.querySelector(".flashCards").append(flashCard);
   document
     .getElementById(`${question.id}`)
     .querySelector(".show")
     .addEventListener("click", () => {
-      document.getElementById(`answer-${question.id}`).classList.toggle("showAnswer");
+      document
+        .getElementById(`answer-${question.id}`)
+        .classList.toggle("showAnswer");
+    });
+  document
+    .getElementById(`edit-${question.id}`)
+    .addEventListener("click", () => {
+      document.getElementById(`${question.id}`).remove();
+    });
+  document
+    .getElementById(`delete-${question.id}`)
+    .addEventListener("click", () => {
+      // Removing from the DOM:
+      document.getElementById(`${question.id}`).remove();
+      // We also remove them from the localStorage:
+      saveToLocalStorage(data.questions.filter((que) => que.id !== question.id));
     });
 };
 const saveBtn = (e, q, a, question, answer) => {
@@ -32,7 +51,7 @@ const saveBtn = (e, q, a, question, answer) => {
     alert("Please provide both answer and question.");
   } else {
     data.questions.push({ Q: q, A: a, id: data.index });
-    saveToLocalStorage();
+    saveToLocalStorage(data.questions);
     createFlashCard({ Q: q, A: a, id: data.index });
     question.value = "";
     answer.value = "";
