@@ -5,7 +5,7 @@ const data = {
   btn: document.querySelector(".btn"),
   res: 0,
 };
-const randomNum = () => {
+const numberGenerator = () => {
   data.num1.innerText = Math.ceil(Math.random() * 10);
   data.num2.innerText = Math.ceil(Math.random() * 10);
 };
@@ -21,9 +21,8 @@ const checkAnswer = () => {
 const result = (n1, n2) => {
   data.res = parseInt(n1.innerText) + parseInt(n2.innerText);
 };
-
 window.addEventListener("load", () => {
-  randomNum();
+  numberGenerator();
   result(data.num1, data.num2);
   checkAnswer();
 });
