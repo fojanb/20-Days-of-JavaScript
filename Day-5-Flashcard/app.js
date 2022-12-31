@@ -1,9 +1,10 @@
 const data = {
   add: document.querySelector("#add"),
-  newCard: document.createElement("form"),
+  form: document.createElement("form"),
   question: "",
   answer: "",
   questions: [],
+  editedQuestion:"",
   index: 0,
 };
 const saveToLocalStorage = (assets) => {
@@ -34,15 +35,19 @@ const createFlashCard = (question) => {
   document
     .getElementById(`edit-${question.id}`)
     .addEventListener("click", () => {
-      document.getElementById(`${question.id}`).remove();
+      document.getElementById(`${question.id}`).classList.add("hide");
+      data.form.classList.remove("hide");
+
     });
   document
     .getElementById(`delete-${question.id}`)
     .addEventListener("click", () => {
-      // Removing from the DOM:
+      // Removing target queetion from the DOM:
       document.getElementById(`${question.id}`).remove();
-      // We also remove them from the localStorage:
-      saveToLocalStorage(data.questions.filter((que) => que.id !== question.id));
+      // We also remove it from the localStorage:
+      saveToLocalStorage(
+        data.questions.filter((que) => que.id !== question.id)
+      );
     });
 };
 const saveBtn = (e, q, a, question, answer) => {
@@ -63,9 +68,8 @@ const closeBtn = (e) => {
   e.target.parentNode.classList.add("hide");
 };
 const makeCard = () => {
-  data.newCard.classList.remove("hide");
-  data.newCard.classList.add("form");
-  data.newCard.innerHTML = `
+  data.form.classList.add("form", "hide");
+  data.form.innerHTML = `
     <span id="close">&times;</span>
     <lable for="question">Question</lable>
     <textarea id="question" style="height:100px;width: 90%;" value=""></textarea>
@@ -73,7 +77,7 @@ const makeCard = () => {
     <textarea id="answer" style="height:100px;width: 90%;" value=""></textarea>
     <button id="save" style="width:30%;">Save</button>
       `;
-  document.querySelector(".container").append(data.newCard);
+  document.querySelector(".container").append(data.form);
   const close = document.querySelector("#close");
   const question = document.querySelector("#question");
   const answer = document.querySelector("#answer");
@@ -94,6 +98,9 @@ const fetchQuestions = () => {
   data.questions.forEach((question) => createFlashCard(question));
 };
 window.addEventListener("load", () => {
-  data.add.addEventListener("click", makeCard);
+  makeCard();
+  data.add.addEventListener("click", () => {
+    data.form.classList.remove("hide");
+  });
   fetchQuestions();
 });
