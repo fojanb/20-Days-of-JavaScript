@@ -9,12 +9,23 @@ const numberGenerator = () => {
   data.num1.innerText = Math.ceil(Math.random() * 10);
   data.num2.innerText = Math.ceil(Math.random() * 10);
 };
+const updateState = () => {
+  data.result.value = "";
+  numberGenerator();
+  result(data.num1, data.num2);
+};
 const checkAnswer = () => {
   data.btn.addEventListener("click", () => {
-    if (data.res == data.result.value) {
-      alert(`Your anwer is correct : ${data.result.value}`);
+    if (!data.result.value) {
+      alert("You did not type any result yet...");
+      return;
+    }
+    if (data.res == parseInt(data.result.value)) {
+      alert("Correct!");
+      updateState();
     } else {
-      alert(`Sorry, incorrect. The correct answer was : ${data.res}`);
+      alert(`Sorry, Incorrect. The correct answer was : ${data.res}`);
+      updateState();
     }
   });
 };
