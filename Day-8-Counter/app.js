@@ -3,14 +3,26 @@ const data = {
   sum: document.querySelector("#summation"),
   counter: document.getElementById("counter"),
 };
-const counting = (el, op) => {
-  el.addEventListener("click", (e) => {
+const counting = (op) => {
+  op.addEventListener("click", (e) => {
     switch (e.target.value) {
-      case "-":
+      case "sub":
         data.counter.innerText = parseInt(data.counter.innerText) - 1;
+        if (parseInt(data.counter.innerText) == 0) {
+          data.counter.style.color = "black";
+        }
+        if (parseInt(data.counter.innerText) < 0) {
+          data.counter.style.color = "#9e2a2b";
+        }
         break;
-      case "+":
+      case "sum":
         data.counter.innerText = parseInt(data.counter.innerText) + 1;
+        if (parseInt(data.counter.innerText) == 0) {
+          data.counter.style.color = "black";
+        }
+        if (parseInt(data.counter.innerText) > 0) {
+          data.counter.style.color = "#006d77";
+        }
         break;
     }
   });
