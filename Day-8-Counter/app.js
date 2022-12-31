@@ -3,13 +3,17 @@ const data = {
   sum: document.querySelector("#summation"),
   counter: document.getElementById("counter"),
 };
-const counting = () => {
-  data.sub.addEventListener("click", () => {
-    let val = parseInt(data.counter.innerText) - 1;
-    data.counter.innerText = val;
+const counting = (el, op) => {
+  el.addEventListener("click", (e) => {
+    switch (e.target.value) {
+      case "-":
+        data.counter.innerText = parseInt(data.counter.innerText) - 1;
+        break;
+      case "+":
+        data.counter.innerText = parseInt(data.counter.innerText) + 1;
+        break;
+    }
   });
 };
-
-
-counting();
-
+counting(data.sub);
+counting(data.sum);
