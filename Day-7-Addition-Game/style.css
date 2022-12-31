@@ -3,7 +3,7 @@ html {
   font-family: "Open Sans", sans-serif;
 }
 body {
-  background-color: #274c77;
+  background-color: #1a324e;
   color: cornsilk;
 }
 .main {
@@ -45,7 +45,7 @@ body {
   width: 50px;
   height: 50px;
   padding: 20px;
-  background-color: #6ede8a3f;
+  background-color: #6edeb91c;
 }
 .result {
   display: flex;
@@ -61,15 +61,16 @@ body {
 }
 button {
   cursor: pointer;
-  background-color: #ea698ccd;
-  border: none;
+  background-color: #1a324e;
+  border: 2px solid #0089f7;
   outline: none;
   padding: 10px;
   color: aliceblue;
   width: auto;
 }
 button:hover {
-  background-color: #ea698c99;
+  background-color: #0088f7ab;
+  transition: 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 1200px) {
