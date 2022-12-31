@@ -9,7 +9,7 @@ const randomNum = () => {
   data.num1.innerText = Math.ceil(Math.random() * 10);
   data.num2.innerText = Math.ceil(Math.random() * 10);
 };
-const buttonHandler = () => {
+const checkAnswer = () => {
   data.btn.addEventListener("click", () => {
     if (data.res == data.result.value) {
       alert(`Your anwer is correct : ${data.result.value}`);
@@ -18,12 +18,12 @@ const buttonHandler = () => {
     }
   });
 };
-const checkResult = (n1, n2) => {
+const result = (n1, n2) => {
   data.res = parseInt(n1.innerText) + parseInt(n2.innerText);
 };
 
 window.addEventListener("load", () => {
   randomNum();
-  checkResult(data.num1, data.num2);
-  buttonHandler();
+  result(data.num1, data.num2);
+  checkAnswer();
 });
