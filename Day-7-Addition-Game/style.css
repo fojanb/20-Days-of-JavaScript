@@ -4,6 +4,18 @@ html {
 }
 body {
   background-color: #274c77;
+  color: cornsilk;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 50px auto;
+}
+.main * {
+  margin: 20px auto;
 }
 .container {
   display: flex;
@@ -11,16 +23,15 @@ body {
   justify-content: space-evenly;
   align-items: center;
   width: 40%;
-  margin: 200px auto;
-  border: 5px solid #2f5f95;
   padding: 50px;
   font-weight: 700;
   font-size: 50px;
   border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .container * {
   text-align: center;
-  margin: 0 auto;
+  margin: 10px auto;
   font-weight: 700;
   font-size: 20px;
   border-radius: 5px;
@@ -30,23 +41,35 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 5px solid #7678ed;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   width: 50px;
   height: 50px;
   padding: 20px;
-  background-color: white;
+  background-color: #6ede8a3f;
 }
 .result {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 5px solid #5dd39e;
   width: 50px;
   height: 50px;
   padding: 20px;
+  outline: none;
+  border: none;
+  background-color: aliceblue;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-button{
+button {
   cursor: pointer;
+  background-color: #ea698ccd;
+  border: none;
+  outline: none;
+  padding: 10px;
+  color: aliceblue;
+  width: auto;
+}
+button:hover {
+  background-color: #ea698c99;
 }
 
 @media screen and (max-width: 1200px) {
