@@ -1,0 +1,49 @@
+{
+  "questions": [
+    {
+      "id": 0,
+      "question": "In which year was The Godfather first released?",
+      "answer": "1972",
+      "opt_1": "1965",
+      "opt_2": "1995",
+      "opt_3": "1972",
+      "opt_4": "1960"
+    },
+    {
+      "id": 1,
+      "question": "Which actor won the best actor Oscar for the films Philadelphia (1993) and Forrest Gump (1994)?",
+      "answer": "Tom Hanks",
+      "opt_1": "Al Pacino",
+      "opt_2": "Keanu Reese",
+      "opt_3": "Reonaldo Decaprio ",
+      "opt_4": "Tom Hanks"
+    },
+    {
+      "id": 2,
+      "question": "How many self-referential cameos did Alfred Hitchcock make in his films from 1927-1976 – 33, 35 or 37?",
+      "answer": "37",
+      "opt_1": "40",
+      "opt_2": "42",
+      "opt_3": "37",
+      "opt_4": "30"
+    },
+    {
+      "id": 3,
+      "question": "Which actress played Mary Poppins in the 1964 film Mary Poppins?",
+      "answer": "Julie Andrews",
+      "opt_1": "Meril Strip",
+      "opt_2": "Julie Andrews",
+      "opt_3": "Pamel Anderson",
+      "opt_4": "Eva Garner"
+    },
+    {
+      "id": 4,
+      "question": "In which 1963 classic film did Charles Bronson appear?",
+      "answer": "The Great Escape",
+      "opt_1": "The Great Escape",
+      "opt_2": "The God Father",
+      "opt_3": "Titanic",
+      "opt_4": "Cast Away"
+    }
+  ]
+}
