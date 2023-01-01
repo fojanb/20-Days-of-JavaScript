@@ -1,10 +1,10 @@
+const data = {
+  question: document.querySelector(".question"),
+  questions: [],
+};
 const fetchQuestions = async () => {
-  const data = await fetch("./questions.json")
-    .then((response) => response.json())
-    .then((data) => console.log(data));
-
+  const response = await fetch("./questions.json");
+  data.questions = await response.json();
 };
 
-window.addEventListener("load", () => {
-  fetchQuestions();
-});
+window.addEventListener("load", fetchQuestions());
