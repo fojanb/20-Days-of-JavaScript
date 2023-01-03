@@ -32,7 +32,6 @@ const fetchQuestions = async () => {
         .getElementById(`btn-${question.id}`)
         .addEventListener("click", () => nextBtn(question.id));
     };
-
     if (question.id == 0) {
       showQuestion(null);
     } else {
@@ -40,5 +39,4 @@ const fetchQuestions = async () => {
     }
   });
 };
-
 window.addEventListener("load", fetchQuestions);
