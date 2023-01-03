@@ -20,7 +20,7 @@ body {
   min-height: 50vh;
   z-index: 2;
   backdrop-filter: blur(0.5rem);
-  box-shadow: 6px 6px 20px rgb(31, 26, 55,0.2);
+  box-shadow: 6px 6px 20px rgba(44, 39, 67, 0.1);
   border-radius: 10px;
   color: aliceblue;
   padding: 15px 25px;
