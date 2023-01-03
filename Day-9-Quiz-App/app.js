@@ -20,10 +20,10 @@ const fetchQuestions = async () => {
       card.innerHTML = `
       <div class="question-title">${question.question}</div>
       <div class="question-options">
-          <div><input type="checkbox"></input>${question.opt_1}</div>
-          <div><input type="checkbox"></input>${question.opt_2}</div>
-          <div><input type="checkbox"></input>${question.opt_3}</div>
-          <div><input type="checkbox"></input>${question.opt_4}</div>
+          <div><input id="opt-1-${question.id}" type="checkbox"></input>${question.opt_1}</div>
+          <div><input id="opt-2-${question.id}" type="checkbox"></input>${question.opt_2}</div>
+          <div><input id="opt-3-${question.id}" type="checkbox"></input>${question.opt_3}</div>
+          <div><input id="opt-4-${question.id}" type="checkbox"></input>${question.opt_4}</div>
       </div>
       <button id="btn-${question.id}">Next Question</button>
       `;
