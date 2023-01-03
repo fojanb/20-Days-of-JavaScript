@@ -18,7 +18,6 @@ const fetchQuestions = async () => {
             <li>${question.opt_4}</li>
         </ol>
         <button id="btn-${question.id}">Next Question</button>
-
         `;
     data.container.append(card);
   });
