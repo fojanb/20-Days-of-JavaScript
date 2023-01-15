@@ -7,7 +7,9 @@
       "opt_1": "1965",
       "opt_2": "1995",
       "opt_3": "1972",
-      "opt_4": "1960"
+      "opt_4": "1960",
+      "show" : "",
+      "active" : true
     },
     {
       "id": 1,
@@ -16,7 +18,9 @@
       "opt_1": "Al Pacino",
       "opt_2": "Keanu Reese",
       "opt_3": "Reonaldo Decaprio ",
-      "opt_4": "Tom Hanks"
+      "opt_4": "Tom Hanks",
+      "show" : "none",
+      "active" : false
     },
     {
       "id": 2,
@@ -25,7 +29,9 @@
       "opt_1": "40",
       "opt_2": "42",
       "opt_3": "37",
-      "opt_4": "30"
+      "opt_4": "30",
+      "show" : "none",
+      "active" : false
     },
     {
       "id": 3,
@@ -34,7 +40,9 @@
       "opt_1": "Meril Strip",
       "opt_2": "Julie Andrews",
       "opt_3": "Pamel Anderson",
-      "opt_4": "Eva Garner"
+      "opt_4": "Eva Garner",
+      "show" : "none",
+      "active" : false
     },
     {
       "id": 4,
@@ -43,7 +51,9 @@
       "opt_1": "The Great Escape",
       "opt_2": "The God Father",
       "opt_3": "Titanic",
-      "opt_4": "Cast Away"
+      "opt_4": "Cast Away",
+      "show" : "none",
+      "active" : false
     }
   ]
 }

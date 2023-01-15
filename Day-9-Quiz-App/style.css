@@ -3,9 +3,11 @@ html {
   font-family: "Open Sans", sans-serif;
 }
 body {
-  background-image: url("./assets/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: radial-gradient(
+    circle 610px at 5.2% 51.6%,
+    rgba(5, 8, 114, 1) 0%,
+    rgba(7, 3, 53, 1) 97.5%
+  );
 }
 .container {
   display: flex;
@@ -17,8 +19,16 @@ body {
   min-height: 50vh;
   z-index: 2;
   backdrop-filter: blur(0.5rem);
-  box-shadow: 6px 6px 20px rgba(255, 255, 255, 0.3);
+  box-shadow: 6px 6px 20px rgba(29, 24, 95, 0.3);
   border-radius: 10px;
   color: aliceblue;
 }
-
+#header {
+  text-align: center;
+}
+.card {
+  margin: 30px;
+}
+ol {
+  list-style-type: none;
+}
