@@ -3,13 +3,6 @@ html {
   font-family: "Open Sans", sans-serif;
 }
 body {
-<<<<<<< HEAD
-  background-image: radial-gradient(
-    circle 610px at 5.2% 51.6%,
-    rgba(5, 8, 114, 1) 0%,
-    rgba(7, 3, 53, 1) 97.5%
-  );
-=======
   background-image: linear-gradient(
     -225deg,
     #1f1a37 0%,
@@ -18,7 +11,6 @@ body {
   );
   min-height: 100vh;
   overflow-y: hidden;
->>>>>>> ca41eefaabc242b96fe8bbd26179042e62d44cdd
 }
 .container {
   display: flex;
@@ -30,11 +22,7 @@ body {
   min-height: 30vh;
   z-index: 2;
   backdrop-filter: blur(0.5rem);
-<<<<<<< HEAD
-  box-shadow: 6px 6px 20px rgba(29, 24, 95, 0.3);
-=======
   box-shadow: 6px 6px 20px rgba(44, 39, 67, 0.4);
->>>>>>> ca41eefaabc242b96fe8bbd26179042e62d44cdd
   border-radius: 10px;
   color: aliceblue;
   padding: 15px 25px;
@@ -76,15 +64,3 @@ body {
 .hidden{
   display: none;
 }
-<<<<<<< HEAD
-#header {
-  text-align: center;
-}
-.card {
-  margin: 30px;
-}
-ol {
-  list-style-type: none;
-}
-=======
->>>>>>> ca41eefaabc242b96fe8bbd26179042e62d44cdd
