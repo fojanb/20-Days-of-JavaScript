@@ -42,9 +42,17 @@ body {
 }
 .container button:hover {
   cursor: pointer;
+  color:#cd8987;
+  background-color:#1d2d44;
+}
+.container button{
+  background-color: #cd8987;
+  font-weight: bold;
+  color: #1d2d44;
+  text-align: center;
 }
 .show {
   display: none;
-  color: #c44900;
+  color: #cd8987;
   font-weight: bolder;
 }
