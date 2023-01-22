@@ -1,87 +1,41 @@
+:root {
+  --ff: "Open Sans", sans-serif;
+  --fs:large;
+  --bg-color: #00273d;
+  --fc-color: #f0f8ff;
+  --margin: 20px auto;
+  --bc-budgetForm: #316c5e;
+  --bc-expenseForm: #713232;
+  --bg-input: #183548;
+  --bg-input-focus: #b7c4cc;
+  --br:5px;
+}
 body {
-  font-family: "Open Sans", sans-serif;
-  background-color: #00273d;
-  color: aliceblue;
-  font-size: large;
+  font-family: var(--ff);
+  background-color: var(--bg-color);
+  color: var(--fc-color);
+  font-size: var(--fs);
 }
 .grid-container {
   display: grid;
   grid-template-columns: auto auto;
   padding: 10px 50px;
 }
-/* .grid-item {
-  text-align: start;
-} */
 .leftCell {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  margin: 20px auto;
+  margin: var(--margin);
 }
-#budget-form,
-#expense-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  border-radius: 5px;
-  padding: 20px;
-  width: 75%;
-  margin: 20px auto;
-}
-#budget-form {
-  border: 3px solid #316c5e;
-}
-#expense-form {
-  border: 3px solid #713232;
-}
-#budget-form *,
-#expense-form * {
-  margin: 5px;
-}
-#budget-form button {
-  border: none;
-  outline: none;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #316c5e;
-  color: aliceblue;
-  cursor: pointer;
-}
-#expense-form button {
-  border: none;
-  outline: none;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #713232;
-  color: aliceblue;
-  cursor: pointer;
-}
-input {
-  border: none;
-  border-bottom: 1px solid #2c6da9;
-  border-radius: 5px;
-  padding: 10px 5px;
-  outline: none;
-  background: #183548;
-  width: 90%;
-}
-input:focus {
-  background-color: #b7c4cc;
-}
-[placeholder]:focus::-webkit-input-placeholder {
-    transition: text-indent 0.4s 0.4s ease; 
-    text-indent: -100%;
-    opacity: 1;
- }
 .rightCell {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  margin: 20px auto;
+  margin: var(--margin);
   height: 50%;
+  padding: 10px;
 }
 
 .rightCell * {
@@ -91,11 +45,72 @@ input:focus {
   align-items: center;
   text-align: center;
 }
-@media screen and (max-width:1200px){
-    .grid-container {
-        display: grid;
-        grid-template-columns: auto;
-        padding: 10px 50px;
-      }
-    
+.leftCell #budget-form,
+.leftCell #expense-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: var(--br);
+  padding: 20px;
+  width: 75%;
+  margin: var(--margin);
+}
+#budget-form {
+  border: 3px solid var(--bc-budgetForm);
+}
+#expense-form {
+  border: 3px solid var(--bc-expenseForm);
+}
+#budget-form *,
+#expense-form * {
+  margin: 5px;
+}
+#budget-form button {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: var(--br);
+  background-color: var(--bc-budgetForm);
+  color: var(--fc-color);
+  cursor: pointer;
+}
+#expense-form button {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: var(--br);
+  background-color: var(--bc-expenseForm);
+  color: var(--fc-color);
+  cursor: pointer;
+}
+#budget-form input {
+  border-bottom: 1px solid var(--bc-budgetForm);
+}
+#expense-form input {
+  border-bottom: 1px solid var(--bc-expenseForm);
+}
+input {
+  border: none;
+  border-radius: var(--br);
+  padding: 10px var(--br);
+  outline: none;
+  background: var(--bg-input);
+  width: 90%;
+}
+input:focus {
+  background-color: var(--bg-input-focus);
+}
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: text-indent 0.4s 0.4s ease;
+  text-indent: -100%;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: auto;
+    gap: 2rem;
+    padding: var(--br) 25px;
+  }
 }
