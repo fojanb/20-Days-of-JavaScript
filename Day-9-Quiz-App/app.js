@@ -62,18 +62,15 @@ const move = (state) => {
   data.prev.classList.remove(...classes);
   data.next.classList.remove(...classes);
   if(state === "backward"){
-    data.current = data.current.previousElementSibling.classList.add("current");
-    data.prev = data.prev.previousElementSibling.classList.add("current")||slides.lastElementChild;
-    data.next = data.current.nextElementSibling.classList.add("next");
-
+    data.next = data.current||data.slides.firstElementChild;
+    data.current = data.current.previousElementSibling;
+    data.prev = data.prev.previousElementSibling||data.slides.lastElementChild;
   }else{
-    data.current = data.current.nextElementSibling.classList.add("current");
-    data.prev = data.current.previousElementSibling.classList.add("prev");
-    data.next = data.current.nextElementSibling.classList.add("next");
-
+    data.prev = data.current||data.slides.lastElementChild;
+    data.current = data.current.nextElementSibling;
+    data.next = data.current.nextElementSibling;
   }
   applyClasses();
-
 }
 startSlider();
 applyClasses();

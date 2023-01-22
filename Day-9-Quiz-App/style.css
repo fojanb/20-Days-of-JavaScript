@@ -1,30 +1,32 @@
 body{
-  background-color: #855c8f;
+  background-color: #2f3e46;
 }
 ol{
   list-style-type:none;
 }
 .question {
-  border: 1px solid #8278afcc;
   padding: 10px;
   border-radius: 5px;
+  text-align: center;
 }
 .slides {
-  width: 300px;
+  width: 400px;
   height: 200px;
   position: relative;
-  margin: 20px auto;
+  margin: 0 auto;
+  margin-top: 100px;
   overflow: hidden;
+
 }
 .slide {
   position: absolute;
-  background: pink;
+  background: #354f52;
   height: 100%;
   width: 100%;
   display: grid;
   align-content: center;
   justify-content: center;
-  color: #855c8f;
+  color: #cad2c5;
   font-size: 16px;
   font-family: sans-serif;
   border-radius: 10px;
@@ -45,10 +47,17 @@ ol{
 }
 .controls {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
   gap: 2rem;
   justify-content: center;
   padding: 2rem;
+}
+.controls button{
+  border: none;
+  background-color: #84a98c;;
+  color: #2f3e46;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 
