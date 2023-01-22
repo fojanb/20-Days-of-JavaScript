@@ -43,6 +43,13 @@ ol{
   z-index: 10;
   transform: translateX(100%);
 }
+.controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
 
 
 

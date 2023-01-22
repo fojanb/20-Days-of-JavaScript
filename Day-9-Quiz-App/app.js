@@ -32,31 +32,50 @@
 // ---------------No API and No json file----------------------------
 
 const data = {
-  current : "",
-  prev:"",
-  next:"",
-  slides : document.querySelector(".slides"),
-  prevBtn : document.querySelector(".goToPrev"),
-  nextBtn : document.querySelector(".goToNext"),
-
-}
+  current: "",
+  prev: "",
+  next: "",
+  slides: document.querySelector(".slides"),
+  prevBtn: document.querySelector(".goToPrev"),
+  nextBtn: document.querySelector(".goToNext"),
+};
 
 const startSlider = () => {
   data.current = data.slides.querySelector(".current");
-  data.prev = data.current.previousElementSibling || data.slides.lastElementChild;;
-  data.next = data.current.nextElementSibling || data.slides.firstElementChild;;
+  data.prev =
+    data.current.previousElementSibling || data.slides.lastElementChild;
+  data.next = data.current.nextElementSibling || data.slides.firstElementChild;
   console.log({
     current: data.current,
-    prev : data.prev,
-    next : data.next,
-  })
-
-}
+    prev: data.prev,
+    next: data.next,
+  });
+};
 const applyClasses = () => {
   data.current.classList.add("current");
   data.prev.classList.add("prev");
   data.next.classList.add("next");
+};
+const move = (state) => {
+  let classes = ["prev","current","next"];
+  data.current.classList.remove(...classes);
+  data.prev.classList.remove(...classes);
+  data.next.classList.remove(...classes);
+  if(state === "backward"){
+    data.current = data.current.previousElementSibling.classList.add("current");
+    data.prev = data.prev.previousElementSibling.classList.add("current")||slides.lastElementChild;
+    data.next = data.current.nextElementSibling.classList.add("next");
+
+  }else{
+    data.current = data.current.nextElementSibling.classList.add("current");
+    data.prev = data.current.previousElementSibling.classList.add("prev");
+    data.next = data.current.nextElementSibling.classList.add("next");
+
+  }
+  applyClasses();
 
 }
 startSlider();
 applyClasses();
+data.prevBtn.addEventListener("click", () => move("backward"));
+data.nextBtn.addEventListener("click", () => move("forward"));
