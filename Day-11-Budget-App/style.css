@@ -31,21 +31,21 @@ body {
   margin: 20px auto;
 }
 #budget-form {
-  border: 2px solid #469d89;
+  border: 3px solid #316c5e;
 }
 #expense-form {
-  border: 2px solid #9d4646;
+  border: 3px solid #713232;
 }
 #budget-form *,
 #expense-form * {
-  margin:5px;
+  margin: 5px;
 }
 #budget-form button {
   border: none;
   outline: none;
   padding: 10px;
   border-radius: 5px;
-  background-color: #469d89;
+  background-color: #316c5e;
   color: aliceblue;
   cursor: pointer;
 }
@@ -54,19 +54,27 @@ body {
   outline: none;
   padding: 10px;
   border-radius: 5px;
-  background-color: #9d4646;
+  background-color: #713232;
   color: aliceblue;
   cursor: pointer;
 }
 input {
   border: none;
-  outline: none;
-  padding: 10px 5px;
+  border-bottom: 1px solid #2c6da9;
   border-radius: 5px;
-  background-color: #b7c4cc;
-  width: 95%;
-
+  padding: 10px 5px;
+  outline: none;
+  background: #183548;
+  width: 90%;
 }
+input:focus {
+  background-color: #b7c4cc;
+}
+[placeholder]:focus::-webkit-input-placeholder {
+    transition: text-indent 0.4s 0.4s ease; 
+    text-indent: -100%;
+    opacity: 1;
+ }
 .rightCell {
   display: flex;
   flex-direction: row;
@@ -82,4 +90,12 @@ input {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+@media screen and (max-width:1200px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto;
+        padding: 10px 50px;
+      }
+    
 }
