@@ -14,8 +14,70 @@
     <title>Quiz App</title>
   </head>
   <body>
-    <div class="container">
-        <h2 id="header">Please choose the proper option</h2>
+    <div class="slider">
+      <div class="slides">
+        <div class="slide current">
+          <div class="question">
+            In which year was The Godfather first released?
+          </div>
+          <ol>
+            <li><input type="checkbox" />1965</li>
+            <li><input type="checkbox" />1995</li>
+            <li><input type="checkbox" />1972</li>
+            <li><input type="checkbox" />1960</li>
+          </ol>
+        </div>
+        <div class="slide">
+          <div class="question">
+            Which actor won the best actor Oscar for the films Philadelphia
+            (1993) and Forrest Gump (1994)?
+          </div>
+          <ol>
+            <li><input type="checkbox" />Al Pacino</li>
+            <li><input type="checkbox" />Tom Hanks</li>
+            <li><input type="checkbox" />Keanu Reeves</li>
+            <li><input type="checkbox" />Reonaldo Decaprio</li>
+          </ol>
+        </div>
+        <div class="slide">
+          <div class="question">
+            How many self-referential cameos did Alfred Hitchcock make in his
+            films from 1927-1976 – 33, 35 or 37?
+          </div>
+          <ol>
+            <li><input type="checkbox" />40</li>
+            <li><input type="checkbox" />42</li>
+            <li><input type="checkbox" />37</li>
+            <li><input type="checkbox" />30</li>
+          </ol>
+        </div>
+        <div class="slide">
+          <div class="question">
+            Which actress played Mary Poppins in the 1964 film Mary Poppins?
+          </div>
+          <ol>
+            <li><input type="checkbox" />Julie Andrews</li>
+            <li><input type="checkbox" />Eva Garner</li>
+            <li><input type="checkbox" />Meril Strip</li>
+            <li><input type="checkbox" />none</li>
+          </ol>
+        </div>
+        <div class="slide">
+          <div class="question">
+            In which 1963 classic film did Charles Bronson appear?
+          </div>
+          <ol>
+            <li><input type="checkbox" />The God Father</li>
+            <li><input type="checkbox" />The Great Escape</li>
+            <li><input type="checkbox" />Titanic</li>
+            <li><input type="checkbox" />none</li>
+          </ol>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="goToPrev">Prev</button>
+        <button class="goToNext">Next</button>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>
