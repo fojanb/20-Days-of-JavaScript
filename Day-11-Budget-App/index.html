@@ -20,53 +20,78 @@
           <h2>BUDGET APP</h2>
           <form id="budget-form">
             <label for="budget">Please Enter Your Budget</label>
-            <input type="text" name="" id="budget" placeholder="Budget" required/>
+            <input
+              type="number"
+              name=""
+              id="budget"
+              placeholder="$ Budget"
+              required
+            />
             <button type="submit">Calculate</button>
           </form>
           <form id="expense-form">
-            <label for="budget">Please Enter Your Expense</label>
-            <input type="text" name="" id="expense" placeholder="Expense" required/>
+            <label for="budget">Please Enter Your Expense Title</label>
+            <input
+              type="text"
+              name=""
+              id="expense"
+              placeholder="$ Expense"
+              required
+            />
             <label for="budget">Please Enter Expense Amount</label>
-            <input type="text" name="" id="expenseAmount" placeholder="Amount" required/>
+            <input
+              type="text"
+              name=""
+              id="expenseAmount"
+              placeholder="Amount"
+              required
+            />
             <button type="submit">Add Expense</button>
           </form>
         </div>
       </div>
       <div class="grid-item">
         <div class="rightCell">
-          <div>
+          <div class="rightCell budget">
             <div>BUDGET</div>
             <div>
               <img src="https://img.icons8.com/color/48/null/cash.png" />
             </div>
-            <div>amount</div>
+            <div style="font-size: 40px; font-weight: 700; color: #316c5e">
+              <span>$</span><span id="budget">0</span>
+            </div>
             <div>Expense Title</div>
             <div>-title</div>
           </div>
-          <div>
+          <div class="rightCell expense">
             <div>EXPENSES</div>
             <div>
               <img
                 src="https://img.icons8.com/color/48/null/bank-card-back-side.png"
               />
             </div>
-            <div>amount</div>
+            <div style="font-size: 40px; font-weight: 700; color: #713232">
+              <span>$</span><span id="expense">0</span>
+            </div>
             <div>Expense Value</div>
             <div>value</div>
           </div>
-          <div>
+          <div class="rightCell balance">
             <div>BALANCE</div>
             <div>
               <img
                 src="https://img.icons8.com/color/48/null/us-dollar-circled--v1.png"
               />
             </div>
-            <div>amount</div>
+            <div style="font-size: 40px; font-weight: 700; color: #f0f8ff">
+              <span>$</span><span id="expense">0</span>
+            </div>
             <div>Expense Value</div>
             <div>icons</div>
           </div>
         </div>
       </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
