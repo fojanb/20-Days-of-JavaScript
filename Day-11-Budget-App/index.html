@@ -34,16 +34,17 @@
             <input
               type="text"
               name=""
-              id="expense"
-              placeholder="$ Expense"
+              placeholder="Title"
+              id="title"
               required
             />
-            <label for="budget">Please Enter Expense Amount</label>
+            <label for="expenseAmount">Please Enter Expense Amount</label>
             <input
-              type="text"
+              type="number"
               name=""
               id="expenseAmount"
-              placeholder="Amount"
+              placeholder="$ Amount"
+              value=""
               required
             />
             <button type="submit">Add Expense</button>
@@ -60,8 +61,8 @@
             <div style="font-size: 40px; font-weight: 700; color: #316c5e">
               <span>$</span><span id="budget"></span>
             </div>
-            <div>Expense Title</div>
-            <div>-title</div>
+            <div>Expense title</div>
+            <div id="expense_title"></div>
           </div>
           <div class="rightCell expense">
             <div>EXPENSES</div>
@@ -71,7 +72,7 @@
               />
             </div>
             <div style="font-size: 40px; font-weight: 700; color: #713232">
-              <span>$</span><span id="expense">0</span>
+              <span>$</span><span id="expense"></span>
             </div>
             <div>Expense Value</div>
             <div>value</div>
