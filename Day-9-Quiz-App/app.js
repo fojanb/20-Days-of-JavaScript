@@ -32,14 +32,6 @@
 // ---------------No API and No json file----------------------------
 
 const data = {
-  questions: [],
-  container: document.querySelector(".container"),
-};
-const nextBtn = (id) => {
-  document.getElementById(`btn-${id}`).parentNode.classList.add("hidden");
-  document
-    .getElementById(`btn-${id}`)
-    .parentNode.nextSibling.classList.remove("hidden");
   current: "",
   prev: "",
   next: "",
@@ -64,5 +56,23 @@ const applyClasses = () => {
   data.prev.classList.add("prev");
   data.next.classList.add("next");
 };
-
-window.addEventListener("load", fetchQuestions);
+const move = (state) => {
+  let classes = ["prev","current","next"];
+  data.current.classList.remove(...classes);
+  data.prev.classList.remove(...classes);
+  data.next.classList.remove(...classes);
+  if(state === "backward"){
+    data.next = data.current||data.slides.firstElementChild;
+    data.current = data.current.previousElementSibling;
+    data.prev = data.prev.previousElementSibling||data.slides.lastElementChild;
+  }else{
+    data.prev = data.current||data.slides.lastElementChild;
+    data.current = data.current.nextElementSibling;
+    data.next = data.current.nextElementSibling;
+  }
+  applyClasses();
+}
+startSlider();
+applyClasses();
+data.prevBtn.addEventListener("click", () => move("backward"));
+data.nextBtn.addEventListener("click", () => move("forward"));
