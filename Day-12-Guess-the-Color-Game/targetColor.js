@@ -1,11 +1,12 @@
 const targetColor = document.createElement("div");
 targetColor.classList.add("targetColor");
-const generateTargetColor = () => {
+const generateColor = () => {
   let rgb = [
     { red: Math.floor(Math.random() * 256) },
     { green: Math.floor(Math.random() * 256) },
     { blue: Math.floor(Math.random() * 256) },
   ];
-  targetColor.innerText = `rgb(${rgb[0].red},${rgb[1].green},${rgb[2].blue})`;
+  return `rgb(${rgb[0].red},${rgb[1].green},${rgb[2].blue})`;
 };
-export { targetColor, generateTargetColor };
+targetColor.innerText = generateColor();
+export { targetColor, generateColor };
