@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
+:root{
+  --clr-1:#252737;
+  --clr-2 : whitesmoke;
+  --clr-3:#dd5e98;
+}
 html {
   box-sizing: border-box;
   margin: 100px auto;
@@ -6,7 +11,7 @@ html {
   font-family: "Roboto", sans-serif;
 }
 body {
-  background-color: #252737;
+  background-color: var(--clr-1);
 }
 .container {
   display: grid;
@@ -16,7 +21,7 @@ body {
   justify-content: space-around;
   width: 100%;
   margin: 50px auto;
-  color: whitesmoke;
+  color: var(--clr-2);
   grid-gap: 10px;
 }
 .container * {
@@ -29,8 +34,8 @@ body {
   cursor: pointer;
   padding: 5px;
   border: none;
-  background-color: #dd5e98;
-  color: whitesmoke;
+  background-color: var(--clr-3);
+  color: var(--clr-2);
   border-radius: 5px;
   font-weight: bold;
   margin: 20px auto;
