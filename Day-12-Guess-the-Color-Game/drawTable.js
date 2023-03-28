@@ -21,11 +21,10 @@ const drawTable = () => {
   console.log(colorArray);
   document.querySelectorAll(`[id^="color-"]`).forEach((color) => {
     color.addEventListener("click", (e) => {
-      console.log(typeof e.target.style.backgroundColor)
-      if (e.target.style.backgroundColor === targetColor.innerText) {
-        console.log("Pass (^_^)");
+      if (e.target.backgroundColor === targetColor.innerText) {
+        console.log("Yay (^_^)");
       } else {
-        console.log("Failed (-_-)");
+        console.log("OoOppsie (-_-)");
       }
     });
   });
