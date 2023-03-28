@@ -1,21 +1,32 @@
 import { generateColor } from "./targetColor.js";
 import { table } from "./app.js";
 import { targetColor } from "./targetColor.js";
-let randomIndex = Math.floor((Math.random() * 2));
+let randomIndex = Math.floor(Math.random() * 10);
+let colorArray = [];
 const drawTable = () => {
-  for (let index = 0; index < 3; index++) {
-    let row = document.createElement("tr");
-    row.setAttribute("id",`row-${index}`)
-    row.innerHTML = `
-        <td><div style="background-color:${generateColor()};width:50px;height:50px;border-radius:50%;cursor:pointer;"></div></td>
-        <td><div style="background-color:${generateColor()};width:50px;height:50px;border-radius:50%;cursor:pointer;"></div></td>
-        <td><div style="background-color:${generateColor()};width:50px;height:50px;border-radius:50%;cursor:pointer;"></div></td>`;
-        table.append(row);
-        
+  for (let index = 0; index < 10; index++) {
+    colorArray.push(generateColor());
   }
-  document.querySelectorAll("td div").forEach((color) => {
+  colorArray[randomIndex] = targetColor.innerText;
+  colorArray.forEach((color, index) => {
+    let circle = document.createElement("div");
+    circle.setAttribute("id", `color-${index}`);
+    circle.style.backgroundColor = color;
+    circle.style.width = "50px";
+    circle.style.height = "50px";
+    circle.style.borderRadius = "50%";
+    circle.style.cursor = "pointer";
+    table.append(circle);
+  });
+  console.log(colorArray);
+  document.querySelectorAll(`[id^="color-"]`).forEach((color) => {
     color.addEventListener("click", (e) => {
-      console.log(e.target.style.backgroundColor);
+      console.log(typeof e.target.style.backgroundColor)
+      if (e.target.style.backgroundColor === targetColor.innerText) {
+        console.log("Pass (^_^)");
+      } else {
+        console.log("Failed (-_-)");
+      }
     });
   });
 };

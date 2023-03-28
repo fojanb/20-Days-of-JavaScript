@@ -59,11 +59,10 @@ body {
 }
 
 #options {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   text-align: center;
   margin: 0 auto;
-}
-#options td {
-  padding: 10px;
 }
