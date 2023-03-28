@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Chewy&display=swap");
+:root {
+  --clr-1: #252737;
+  --clr-2: #e6e5e5;
+  --clr-3: #dd5e98;
+  --clr-4: #f5ed00;
+  --clr-5: gray;
+  --clr-6: #7432aa;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Chewy", cursive;
+}
+body {
+  background-color: var(--clr-2);
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 200px auto;
+}
+.container button {
+  cursor: pointer;
+  width: 200px;
+  padding: 10px;
+  font-size: larger;
+  border-radius: 5px;
+  background-color: #f6ae2d;
+  border: none;
+  outline: none;
+  letter-spacing: 3px;
+  color: var(--clr-1);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.modal-content {
+  background-color: wheat;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 30%;
+}
+.closeModal {
+  color: blue;
+  float: right;
+  font-weight: bold;
+  font-size: 30px;
+  cursor: pointer;
+}
+.closeModal:hover {
+  color: red;
+}
+.animated {
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+  }
