@@ -17,16 +17,15 @@ const drawTable = () => {
     circle.style.borderRadius = "50%";
     circle.style.border = "1px solid gray";
     circle.style.cursor = "pointer";
-    circle.style.margin = "10px"
+    circle.style.margin = "10px";
     table.append(circle);
   });
-  console.log(colorArray);
   document.querySelectorAll(`[id^="color-"]`).forEach((color) => {
     color.addEventListener("click", (e) => {
       if (e.target.style.backgroundColor === targetColor.innerText) {
-        console.log("Yay! (^_^)");
+        alert("Yay! (^_^)");
       } else {
-        console.log("Oops... (-_-)");
+        alert("Oops... (-_-)");
       }
     });
   });

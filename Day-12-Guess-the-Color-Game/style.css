@@ -28,21 +28,12 @@ body {
 .container * {
   text-align: center;
 }
-.container button {
-  width: 100px;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  padding: 5px;
-  border: none;
-  background-color: var(--clr-3);
-  color: var(--clr-2);
-  border-radius: 5px;
-  font-weight: bold;
-  margin: 20px auto;
-}
 .target {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   font-size: 40px;
   text-align: center;
   margin: 0 auto;
@@ -52,7 +43,6 @@ body {
 .target * {
   margin-right: 10px;
 }
-
 #options {
   display: flex;
   flex-direction: row;
@@ -68,14 +58,16 @@ body {
   align-items: center;
   text-align: center;
   margin: 25px auto;
-  padding: 0 10px;
-  width: auto;
+  padding: 10px;
   font-family: inherit;
   letter-spacing: 4px;
   font-size: large;
   color: var(--clr-4);
   -webkit-text-stroke: 1px var(--clr-6);
   border: 1px solid var(--clr-4);
+  cursor: pointer;
+  background-color: var(--clr-3);
+  border-radius: 5px;
 }
 #restColor * {
   margin: 0 auto;
