@@ -15,7 +15,9 @@ const drawTable = () => {
     circle.style.width = "50px";
     circle.style.height = "50px";
     circle.style.borderRadius = "50%";
+    circle.style.border = "1px solid gray";
     circle.style.cursor = "pointer";
+    circle.style.margin = "10px"
     table.append(circle);
   });
   console.log(colorArray);

@@ -6,14 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Guess the Color Game</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png" />
   </head>
   <body>
     <div class="container">
-      <div class="target">Target Color</div>
-      <div class="targetColor"></div>
-      <div id="options">
+      <div class="target">
+        <span>Find me : </span>
+        <span class="targetColor"></span>
       </div>
-      <button id="restColor">Reset Colors</button>
+
+      <div id="options"></div>
+      <button id="restColor">
+        <img src="https://img.icons8.com/doodle/48/null/rgb-circle-2.png" alt="target color"/>
+        <span>RESET</span>
+      </button>
     </div>
     <!-- Entry point for the js modules -->
     <script src="./app.js" type="module"></script>

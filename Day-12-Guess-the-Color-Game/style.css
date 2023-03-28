@@ -1,14 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
-:root{
-  --clr-1:#252737;
-  --clr-2 : whitesmoke;
-  --clr-3:#dd5e98;
+@import url("https://fonts.googleapis.com/css2?family=Chewy&display=swap");
+:root {
+  --clr-1: #252737;
+  --clr-2: #e6e5e5;
+  --clr-3: #dd5e98;
+  --clr-4: #f5ed00;
+  --clr-5: gray;
+  --clr-6: #7432aa;
 }
 html {
   box-sizing: border-box;
   margin: 100px auto;
-  font-family: "Open Sans", sans-serif;
-  font-family: "Roboto", sans-serif;
+  font-family: "Chewy", cursive;
 }
 body {
   background-color: var(--clr-1);
@@ -21,7 +23,6 @@ body {
   justify-content: space-around;
   width: 100%;
   margin: 50px auto;
-  color: var(--clr-2);
   grid-gap: 10px;
 }
 .container * {
@@ -43,19 +44,13 @@ body {
 .target {
   display: flex;
   font-size: 40px;
-  font-weight: bolder;
   text-align: center;
   margin: 0 auto;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
+  color: var(--clr-2);
 }
-.targetColor {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  font-size: 20px;
-  letter-spacing: 2px;
-  margin: 10px auto;
-  font-weight: bold;
+.target * {
+  margin-right: 10px;
 }
 
 #options {
@@ -65,4 +60,25 @@ body {
   justify-content: center;
   text-align: center;
   margin: 0 auto;
+}
+#restColor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 25px auto;
+  padding: 0 10px;
+  width: auto;
+  font-family: inherit;
+  letter-spacing: 4px;
+  font-size: large;
+  color: var(--clr-4);
+  -webkit-text-stroke: 1px var(--clr-6);
+  border: 1px solid var(--clr-4);
+}
+#restColor * {
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
 }
