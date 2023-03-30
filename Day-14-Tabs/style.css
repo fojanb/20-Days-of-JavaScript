@@ -16,8 +16,8 @@ body {
 .nav-bar {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  background-color: #afafc7;
   color: #5f7daf;
+  background-color: #afafc7;
   width: 50%;
   align-items: center;
 }
@@ -30,7 +30,9 @@ body {
   text-align: center;
   margin: 0 auto;
   cursor: pointer;
+  width:100%;
 }
+
 article {
   background-color: #f7dfd3;
   color: rgb(108, 108, 108);
