@@ -1,8 +1,8 @@
-import { lorem , tabs_info } from "./lorem.js";
+import { tabs_info } from "./tab_infos.js";
 const article = document.querySelector("article");
 const tabs = document.querySelectorAll(".nav-bar .nav-item");
 const handler = (e) => {
-  let target = tabs_info.find(tab => tab.id === e.target.id);
+  let target = tabs_info.find((tab) => tab.id === e.target.id);
   document.querySelectorAll(".active_tab").forEach((tab) => {
     tab.classList.remove("active_tab");
   });
