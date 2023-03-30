@@ -8,4 +8,10 @@ let lorem = `here are many variations of passages of Lorem Ipsum available,
     a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
     The generated Lorem Ipsum is therefore always free from repetition, injected humour,
     or non-characteristic words etc.`;
-export { lorem };
+const tabs_info = [
+  { id: "home", content: `<div>home</div>` },
+  { id: "about", content: `<div>about</div>` },
+  { id: "services", content: `<div>services</div>` },
+  { id: "contact", content: `<div>contact</div>` },
+];
+export { lorem , tabs_info };
