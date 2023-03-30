@@ -18,12 +18,10 @@ body {
   grid-template-columns: auto auto auto auto;
   background-color: #afafc7;
   color: #5f7daf;
-  padding: 15px;
-  border-radius: 5px;
-  margin: 10px;
   width: 50%;
   align-items: center;
 }
+
 .nav-item {
   display: flex;
   flex-direction: row;
@@ -36,9 +34,7 @@ body {
 article {
   background-color: #f7dfd3;
   color: rgb(108, 108, 108);
-  margin: 10px;
   padding: 15px 20px;
-  border-radius: 5px;
   min-height: 70vh;
   width: 50%;
 }
@@ -47,8 +43,7 @@ article p {
     line-height:25px;
 }
 .active_tab {
-    color: #f7dfd3;
-    border : 2px solid #e2c3c8;
+    background-color: #f7dfd3;
+    color:#5f7daf;
     padding: 10px;
-    border-radius: 5px;
 }
