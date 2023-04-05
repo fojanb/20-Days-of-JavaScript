@@ -26,10 +26,11 @@
         fill-opacity="0.3"
       />
     </svg>
-    <div class="main">
+    <form method="post" class="main">
       <div>
         <label for="user_input">Enter words/sentence to translate</label>
         <input
+          class="field"
           type="text"
           id="user_input"
           placeholder="i.e. Hello"
@@ -38,17 +39,11 @@
         />
       </div>
       <div>
-        <label for="user_input">Enter desired language</label>
-        <input
-          type="text"
-          id="user_input"
-          placeholder="i.e. Spanish"
-          required
-          autocomplete="off"
-        />
+        <label for="target_lang">Enter desired language</label>
+        <select id="languages" class="field"></select>
       </div>
-      <button>TRANSLATE</button>
-    </div>
+      <button type="submit">TRANSLATE</button>
+    </form>
     <script src="app.js" type="module"></script>
   </body>
 </html>

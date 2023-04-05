@@ -52,7 +52,7 @@ button:hover {
   color: #1d1b24;
   transform: scale(1.06);
 }
-input[type="text"] {
+.field {
   background-color: #86a3c3;
   border: 2px solid #aab6c9;
   outline: none;
@@ -60,6 +60,7 @@ input[type="text"] {
   padding: 10px;
   width: 40%;
 }
-input[type="text"]:focus {
+
+.field:focus {
   background-color: rgba(227, 164, 206, 0.2);
 }
