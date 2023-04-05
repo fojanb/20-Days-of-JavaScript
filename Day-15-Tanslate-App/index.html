@@ -8,42 +8,36 @@
     <title>Translate App</title>
   </head>
   <body>
-    <h2>TRANSLATE APP</h2>
-    <svg
-      width="174"
-      height="22"
-      viewBox="0 0 174 22"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <ellipse
-        opacity="0.5"
-        cx="87"
-        cy="11"
-        rx="87"
-        ry="11"
-        fill="#584f85"
-        fill-opacity="0.3"
-      />
-    </svg>
-    <form method="post" class="main">
+    <div class="main">
+      <div id="title">TRANSLATE APP</div>
+      <svg
+        width="174"
+        height="22"
+        viewBox="0 0 174 22"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <ellipse
+          opacity="0.5"
+          cx="87"
+          cy="11"
+          rx="87"
+          ry="11"
+          fill="#584f85"
+          fill-opacity="0.3"
+        />
+      </svg>
       <div>
         <label for="user_input">Enter words/sentence to translate</label>
-        <input
-          class="field"
-          type="text"
-          id="user_input"
-          placeholder="i.e. Hello"
-          required
-          autocomplete="off"
-        />
+        <textarea id="user_input">
+        </textarea>
       </div>
       <div>
         <label for="target_lang">Enter desired language</label>
         <select id="languages" class="field"></select>
       </div>
-      <button type="submit">TRANSLATE</button>
-    </form>
+      <textarea id="translated_text"> </textarea>
+    </div>
     <script src="app.js" type="module"></script>
   </body>
 </html>

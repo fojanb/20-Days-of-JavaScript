@@ -1,28 +1,36 @@
-@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito&display=swap");
 * {
   box-sizing: border-box;
 }
 body {
-  font-family: "Lilita One", cursive;
+  font-family: "Nunito", sans-serif;
   background-color: #86a3c3;
-  color: #584f85;
+  color: #4e4676;
   margin: 100px auto;
   text-align: center;
   font-size: larger;
 }
-h2 {
+#title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
   letter-spacing: 4px;
+  text-align: center;
+  font-weight: bolder;
 }
 .main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30%;
   margin: 0 auto;
   padding: 20px;
   border-radius: 5px;
-  width: 40%;
+  width: 50%;
+  border: 2px solid #aab6c9;
+  text-align: center;
 }
 .main div {
   display: flex;
@@ -33,25 +41,7 @@ h2 {
   margin: 20px auto;
   text-align: left;
 }
-button {
-  margin: 40px auto;
-  cursor: pointer;
-  background-color: #a7d3a6;
-  padding: 10px;
-  border: none;
-  outline: none;
-  border-radius: 4px;
-  font-weight: 800;
-  color: #584f85;
-  letter-spacing: 2px;
-  transform: scale(1);
-  transition: transform 0.3s;
-}
-button:hover {
-  opacity: 0.7;
-  color: #1d1b24;
-  transform: scale(1.06);
-}
+
 .field {
   background-color: #86a3c3;
   border: 2px solid #aab6c9;
@@ -63,4 +53,20 @@ button:hover {
 
 .field:focus {
   background-color: rgba(227, 164, 206, 0.2);
+}
+#translated_text {
+  background-color: rgba(167, 211, 166, 0.2);
+  border: 2px solid #aab6c9;
+  outline: none;
+  border-radius: 4px;
+  width: 100%;
+  height: 20vh;
+}
+#user_input {
+  background-color: rgba(227, 164, 206, 0.2);
+  border: 2px solid #aab6c9;
+  outline: none;
+  border-radius: 4px;
+  width: 40%;
+  height: 20vh;
 }
