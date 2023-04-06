@@ -6,7 +6,7 @@ body {
   font-family: "Nunito", sans-serif;
   background-color: #86a3c3;
   color: #4e4676;
-  margin: 100px auto;
+  margin: 50px auto;
   text-align: center;
   font-size: larger;
 }
@@ -16,7 +16,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 10px auto;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   text-align: center;
   font-weight: bolder;
 }
@@ -29,8 +29,9 @@ body {
   padding: 20px;
   border-radius: 5px;
   width: 50%;
-  border: 2px solid #aab6c9;
+  border: 3px solid #aab6c9;
   text-align: center;
+  font-weight: bolder;
 }
 .main div {
   display: flex;
@@ -44,7 +45,7 @@ body {
 
 .field {
   background-color: #86a3c3;
-  border: 2px solid #aab6c9;
+  border: 3px solid #aab6c9;
   outline: none;
   border-radius: 4px;
   padding: 10px;
@@ -52,11 +53,11 @@ body {
 }
 
 .field:focus {
-  background-color: rgba(227, 164, 206, 0.2);
+  background-color: rgba(234, 207, 253, 0.192);
 }
 #translated_text {
   background-color: rgba(167, 211, 166, 0.2);
-  border: 2px solid #aab6c9;
+  border: 3px solid #aab6c9;
   outline: none;
   border-radius: 4px;
   width: 100%;
@@ -64,7 +65,7 @@ body {
 }
 #user_input {
   background-color: rgba(227, 164, 206, 0.2);
-  border: 2px solid #aab6c9;
+  border: 3px solid #aab6c9;
   outline: none;
   border-radius: 4px;
   width: 40%;
