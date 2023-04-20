@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
 :root {
   --bg-clr: #e9d8a6;
   --tilte-clr: #9b2226;
 }
-=======
->>>>>>> a78c9b31f49fd139eb0588daebeeb70b273ae33d
 * {
   box-sizing: border-box;
 }
 body {
-<<<<<<< HEAD
   font-family: "Lilita One", cursive;
   background-color: var(--bg-clr);
   margin: 50px auto;
@@ -52,31 +48,3 @@ button:hover{
   width: 50px;
   height: 50px;
 }
-=======
-  margin: 20px auto;
-  text-align: center;
-}
-#search {
-  width: 30%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid gray;
-}
-#search:focus {
-  background-color: beige;
-}
-#search_btn {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid rgb(40, 10, 117);
-  cursor: pointer;
-}
-.card {
-  display: none;
-  flex-direction: column;
-  width: 40%;
-  border: 1px solid gray;
-  border-radius: 5px;
-  height: auto;
-}
->>>>>>> a78c9b31f49fd139eb0588daebeeb70b273ae33d
