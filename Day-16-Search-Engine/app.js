@@ -2,7 +2,7 @@ import { API_KEY_1, API_KEY_2 } from "./myapikeys.js";
 const searchInput = document.getElementById("search");
 const searchButton = document.querySelector("button");
 const holder = document.createElement("div");
-holder.classList.add("holder")
+holder.classList.add("holder");
 const options = {
   method: "GET",
   headers: {
@@ -26,12 +26,14 @@ const makeGallery = (images) => {
   });
 };
 const getImage = async () => {
+  holder.innerHTML = null;
   let data = await fetch(
     `https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/ImageSearchAPI?q=${searchInput.value}&pageNumber=1&pageSize=10&autoCorrect=true`,
     options
   ).then((response) => response.json());
   console.log(data.value);
   makeGallery(data.value);
+  searchInput.value="";
 };
 window.addEventListener("load", () => {
   searchButton.addEventListener("click", getImage);
