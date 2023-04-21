@@ -1,6 +1,8 @@
 import { API_KEY_1, API_KEY_2 } from "./myapikeys.js";
 const searchInput = document.getElementById("search");
 const searchButton = document.querySelector("button");
+const holder = document.createElement("div");
+holder.classList.add("holder")
 const options = {
   method: "GET",
   headers: {
@@ -10,10 +12,17 @@ const options = {
 };
 const makeGallery = (images) => {
   images.forEach((image, index) => {
-    const frame = document.createElement("img");
-    frame.src = image.thumbnail;
-    frame.setAttribute("id", index);
-    document.body.append(frame);
+    const frame = document.createElement("div");
+    const img = document.createElement("img");
+    const title = document.createElement("span");
+    title.innerText = image.title;
+    frame.classList.add("frame");
+    img.src = image.thumbnail;
+    img.alt = image.title;
+    img.setAttribute("id", index);
+    frame.append(img,title);
+    holder.append(frame);
+    document.body.append(holder)
   });
 };
 const getImage = async () => {
