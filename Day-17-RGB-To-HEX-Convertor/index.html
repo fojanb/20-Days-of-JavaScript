@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>RGB To HEX Convertor</title>
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" placeholder="Hex" id="input-hex" minlength="6" maxlength="6" />
+      <button id="convert">Convert</button>
+      <button id="reset">Reset</button>
+      <button id="swap">Swap</button>
+      <div class="rgb">
+        <label for="red">red</label>
+        <input type="text" id="red" disabled />
+        <label for="green">green</label>
+        <input type="text" id="green" disabled />
+        <label for="blue">blue</label>
+        <input type="text" id="blue" disabled />
+      </div>
+      <div class="css-color">
+        <label for="css_color">css color</label>
+        <input
+          type="text"
+          id="css_color"
+          value="rgb(12,9,120)"
+          placeholder="rgb(12,9,120)"
+          disabled
+        />
+      </div>
+      <div class="preview_color">
+        <textarea name="preview_color" id="" cols="30" rows="2"></textarea>
+      </div>
+    </div>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
