@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
 :root {
   --beige-clr: #f1e9da;
-  --blue-clr: #6883ba;
-  --green-clr: #b0e298;
-  --pink-clr: #e072a4;
+  --blue-clr: #cedbf6;
+  --green-clr: #89ba73;
+  --pink-clr: #f08080;
   --purple-clr: #9883e5;
 }
 * {
@@ -11,7 +11,7 @@
 }
 body {
   font-family: "Lilita One", cursive;
-  background-color: var(--beige-clr);
+  background-color:#4a4e69;
   margin: 50px auto;
   overflow-x:hidden;
 }
@@ -26,8 +26,9 @@ body {
   margin: 5px;
 }
 .wrapper h2 {
-  color: var(--blue-clr);
+  color: var(--green-clr);
   letter-spacing: 2px;
+  font-weight: lighter;
 }
 #search_area input {
   padding: 10px;
@@ -38,15 +39,15 @@ button {
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: var(--green-clr);
-  color: var(--blue-clr);
+  background-color: var(--pink-clr);
+  color: #4a4e69;
   font-family: inherit;
   letter-spacing: 1px;
   cursor: pointer;
 }
 button:hover {
   background-color: var(--pink-clr);
-  color: var(--beige-clr);
+  color: #fff;
 }
 .holder {
   display: grid;
