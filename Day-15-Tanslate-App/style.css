@@ -4,11 +4,25 @@
 }
 body {
   font-family: "Nunito", sans-serif;
-  background-color: #86a3c3;
-  color: #4e4676;
+  background-image: linear-gradient(
+    to right,
+    #0f243e,
+    #1d2e48,
+    #2a3953,
+    #37445e,
+    #444f69,
+    #444f69,
+    #444f69,
+    #444f69,
+    #37445e,
+    #2a3953,
+    #1d2e48,
+    #0f243e
+  );
   margin: 50px auto;
   text-align: center;
   font-size: larger;
+  color: rgb(61, 193, 116);
 }
 #title {
   display: flex;
@@ -29,9 +43,13 @@ body {
   padding: 20px;
   border-radius: 5px;
   width: 50%;
-  border: 3px solid #aab6c9;
+  border: 3px solid #809af0;
   text-align: center;
   font-weight: bolder;
+  background-color: #444f69;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 .main div {
   display: flex;
@@ -44,8 +62,7 @@ body {
 }
 
 .field {
-  background-color: #86a3c3;
-  border: 3px solid #aab6c9;
+  border: 3px solid #809af0;
   outline: none;
   border-radius: 4px;
   padding: 10px;
@@ -56,16 +73,14 @@ body {
   background-color: rgba(234, 207, 253, 0.192);
 }
 #translated_text {
-  background-color: rgba(167, 211, 166, 0.2);
-  border: 3px solid #aab6c9;
+  border: 3px solid #809af0;
   outline: none;
   border-radius: 4px;
   width: 100%;
   height: 20vh;
 }
 #user_input {
-  background-color: rgba(227, 164, 206, 0.2);
-  border: 3px solid #aab6c9;
+  border: 3px solid #809af0;
   outline: none;
   border-radius: 4px;
   width: 40%;
