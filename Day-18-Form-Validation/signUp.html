@@ -11,11 +11,20 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Sign In</title>
+    <title>Form Validation via JavaScript</title>
   </head>
   <body>
+    <!-- sign in / sign out / sign up -->
     <div class="container w-25 bg-light p-4 rounded border">
-      <h3 class="mb-4 fw-light">Sign In</h3>
+      <h3 class="mb-4 fw-light">Sign Up</h3>
+      <div class="mb-3">
+        <label for="name" class="form-label text-muted">Name</label>
+        <input type="text" name="" id="name" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label text-muted">Email</label>
+        <input type="email" name="email" id="email" class="form-control" />
+      </div>
       <div class="mb-3">
         <label for="username" class="form-label text-muted">Username</label>
         <input type="text" name="" id="username" class="form-control" />
@@ -24,9 +33,17 @@
         <label for="password" class="form-label text-muted">Password</label>
         <input type="text" name="" id="password" class="form-control" />
       </div>
-      <button type="button" class="btn btn-primary">Sign In</button>
+      <div class="mb-3">
+        <label for="confirmPassword" class="form-label text-muted">Confirm Password</label>
+        <input type="text" name="" id="confirmPassword" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label for="mobileNumber" class="form-label text-muted">Mobile Number</label>
+        <input type="tel" name="" id="mobileNumber" class="form-control" />
+      </div>
+      <button type="button" class="btn btn-primary">Submit</button>
       <button type="button" class="btn btn-secondary">Reset</button>
-      <div class="mt-2">Have no account? <a class="text-decoration-none" href="./index.html">Sign Up</a></div>
+      <div class="mt-2">Already have an account? <a class="text-decoration-none" href="./index.html">Sign In</a></div>
     </div>
     <script src="app.js" type="module"></script>
   </body>
