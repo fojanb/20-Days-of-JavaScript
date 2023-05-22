@@ -14,19 +14,21 @@
     <title>Sign In</title>
   </head>
   <body>
-    <div class="container w-25 bg-light p-4 rounded border">
+    <form id="valid_form" class="container w-25 bg-light p-4 rounded border">
       <h3 class="mb-4 fw-light">Sign In</h3>
       <div class="mb-3">
         <label for="username" class="form-label text-muted">Username</label>
-        <input type="text" name="" id="username" class="form-control" />
+        <input type="text" name="" id="userName" class="form-control" autocomplete="off"/>
+        <div id="username_alert"></div>
       </div>
       <div class="mb-3">
         <label for="password" class="form-label text-muted">Password</label>
-        <input type="text" name="" id="password" class="form-control" />
+        <input type="text" name="" id="password" class="form-control" autocomplete="off"/>
+        <div id="password_alert"></div>
       </div>
-      <button type="button" class="btn btn-primary">Sign In</button>
+      <button type="submit" class="btn btn-primary">Sign In</button>
       <div class="mt-2">Have no account? <a class="text-decoration-none" href="./signUp.html">Sign Up</a></div>
-    </div>
+    </form>
     <script src="index.js" type="module"></script>
   </body>
 </html>
