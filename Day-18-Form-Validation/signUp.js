@@ -14,11 +14,48 @@ const input_validation = (user_input, input_alert, e) => {
     return;
   }
 };
+const name_validation = (name_input, msg, e) => {
+  if (!name_input.value) {
+    e.preventDefault();
+    name_input.nextElementSibling.classList.add("text-danger");
+    name_input.nextElementSibling.innerText = `**Please fill the ${msg} field.`;
+    return;
+  }
+  if (!isNaN(name_input.value)) {
+    e.preventDefault();
+    name_input.nextElementSibling.classList.add("text-danger");
+    name_input.nextElementSibling.innerText = `**Must be alphabetic characters.`;
+    return;
+  }
+  if (name_input.value.length <= 3 || name_input.value.length >= 20) {
+    e.preventDefault();
+    name_input.nextElementSibling.classList.add("text-danger");
+    name_input.nextElementSibling.innerText = `**Must be between 3 to 20 long characters.`;
+  } else {
+    return;
+  }
+};
+const password_validation = (pass,msg,e) => {
+  if (!pass.value) {
+    e.preventDefault();
+    pass.nextElementSibling.classList.add("text-danger");
+    pass.nextElementSibling.innerText = `**Please fill the ${msg} field.`;
+    return;
+  }
+  
+  if (pass.value.length <= 9 || pass.value.length >= 15) {
+    e.preventDefault();
+    pass.nextElementSibling.classList.add("text-danger");
+    pass.nextElementSibling.innerText = `**Must be between 9 to 15 long numbers and alphabets.`;
+  } else {
+    return;
+  }
+}
 form.addEventListener("submit", (e) => {
-  input_validation(firstName, "name", e);
+  name_validation(firstName, "name", e);
+  name_validation(userName, "username", e);
   input_validation(email, "email", e);
-  input_validation(userName, "username", e);
-  input_validation(password, "password", e);
+  password_validation(password, "password", e)
   input_validation(confirmPassword, "password", e);
   input_validation(mobileNumber, "cell number", e);
 });
