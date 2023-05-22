@@ -9,7 +9,7 @@ const input_validation = (user_input, input_alert, e) => {
   if (!user_input.value) {
     e.preventDefault();
     user_input.nextElementSibling.classList.add("text-danger");
-    user_input.nextElementSibling.innerText = `**Please enter valid ${input_alert}.`;
+    user_input.nextElementSibling.innerText = `**Please fill the ${input_alert} field.`;
   } else {
     return;
   }
