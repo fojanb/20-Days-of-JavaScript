@@ -15,36 +15,42 @@
   </head>
   <body>
     <!-- sign in / sign out / sign up -->
-    <div class="container w-25 bg-light p-4 rounded border">
+    <form id="valid_form" class="container w-25 bg-light p-4 rounded border">
       <h3 class="mb-4 fw-light">Sign Up</h3>
       <div class="mb-3">
         <label for="name" class="form-label text-muted">Name</label>
-        <input type="text" name="" id="name" class="form-control" />
+        <input type="text" name="" id="name" class="form-control" autocomplete="off"/>
+        <div id="name_alert"></div>
       </div>
       <div class="mb-3">
         <label for="email" class="form-label text-muted">Email</label>
-        <input type="email" name="email" id="email" class="form-control" />
+        <input type="email" name="email" id="email" class="form-control" autocomplete="off"/>
+        <div id="email_alert"></div>
       </div>
       <div class="mb-3">
-        <label for="username" class="form-label text-muted">Username</label>
-        <input type="text" name="" id="username" class="form-control" />
+        <label for="userName" class="form-label text-muted">Username</label>
+        <input type="text" name="" id="userName" class="form-control" autocomplete="off"/>
+        <div id="userName_alert"></div>
       </div>
       <div class="mb-3">
         <label for="password" class="form-label text-muted">Password</label>
-        <input type="text" name="" id="password" class="form-control" />
+        <input type="text" name="" id="password" class="form-control" autocomplete="off"/>
+        <div id="password_alert"></div>
       </div>
       <div class="mb-3">
         <label for="confirmPassword" class="form-label text-muted">Confirm Password</label>
-        <input type="text" name="" id="confirmPassword" class="form-control" />
+        <input type="text" name="" id="confirmPassword" class="form-control" autocomplete="off"/>
+        <div id="confirmPAssword_alert"></div>
       </div>
       <div class="mb-3">
         <label for="mobileNumber" class="form-label text-muted">Mobile Number</label>
-        <input type="tel" name="" id="mobileNumber" class="form-control" />
+        <input type="tel" name="" id="mobileNumber" class="form-control" autocomplete="off"/>
+        <div id="mobileNumber_alert"></div>
       </div>
-      <button type="button" class="btn btn-primary">Submit</button>
-      <button type="button" class="btn btn-secondary">Reset</button>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <input type="button" class="btn btn-secondary" value="Reset"/>
       <div class="mt-2">Already have an account? <a class="text-decoration-none" href="./index.html">Sign In</a></div>
-    </div>
+    </form>
     <script src="app.js" type="module"></script>
   </body>
 </html>
