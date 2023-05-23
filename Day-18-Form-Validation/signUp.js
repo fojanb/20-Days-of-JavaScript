@@ -5,7 +5,8 @@ const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirmPassword");
 const mobileNumber = document.getElementById("mobileNumber");
 const form = document.getElementById("valid_form");
-const show_passwrod = document.getElementById("visibility");
+const show_passwrod = document.getElementById("pass_visibility");
+const show_confirmPassword = document.getElementById("conpass_visibility");
 const input_validation = (user_input, input_alert, e) => {
   if (!user_input.value) {
     e.preventDefault();
@@ -70,13 +71,15 @@ const password_validation = (pass, msg, e) => {
     };
   }
 };
-show_passwrod.addEventListener("click" , (e) => {
+const showPassword_handler = (e,main_target) => {
   if(e.target.checked){
-    password.type = "text";
+    main_target.type = "text";
   }else{
-    password.type = "password";
+    main_target.type = "password";
   }
-});
+}
+show_passwrod.addEventListener("click" , (e) => showPassword_handler(e,password) );
+show_confirmPassword.addEventListener("click",(e) =>showPassword_handler(e,confirmPassword));
 form.addEventListener("submit", (e) => {
   name_validation(firstName, "name", e);
   name_validation(userName, "username", e);
