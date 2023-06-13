@@ -1,14 +1,15 @@
 :root {
-  --background-color: #fafafa;
+  --background-color: #f9dcc4;
   --font-family: system-ui, sans-serif;
-  --font-size:18px;
+  --font-size: 18px;
 }
 * {
   box-sizing: border-box;
   font-family: var(--font-family);
   background-color: var(--background-color);
-  color: black;
+  color: #805d64;
   font-size: var(--font-size);
+  font-weight: 500;
 }
 
 .container {
@@ -23,13 +24,57 @@
   text-align: center;
   margin: 20px;
 }
-.container .row * {
+.container .row *,
+.container .row-rgb * {
   margin: 10px;
   padding: 5px;
 }
+.container .row-rgb {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 20px;
+  width: 50%;
+}
+.container .row-rgb div{
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
 .container .row button {
   cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: #f9dcc4;
 }
-.container .row input {
-    color: black;
-  }
+.container .row input,
+.container .row-rgb input {
+  color: #1d3461;
+  appearance: none;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+}
+#convert-button {
+  background-color: #b5838d;
+}
+#reset-button {
+  background-color: #e5989b;
+}
+#swap-button {
+  background-color: #e08c77;
+}
+#red-color {
+  background-color: rgba(255, 0, 0, 0.208);
+}
+#green-color {
+  background-color: rgba(129, 178, 154, 0.2);
+}
+#blue-color {
+  background-color: rgba(58, 134, 255, 0.2);
+}
+#css-color {
+  background-color: #f9dcc4;
+}

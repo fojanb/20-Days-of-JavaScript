@@ -18,7 +18,7 @@ convertBtn.addEventListener("click", (e) => {
     green.value = parseInt(hex.substring(2, 4), 16);
     blue.value = parseInt(hex.substring(4, 6), 16);
     result.value = `rgb(${red.value},${green.value},${blue.value})`;
-    rgb_background_color.style.backgroundColor = result.value;
+    rgb_background_color.style.fill = `#${hex}`;
   }
 });
 export { red, green, blue, result, rgb_background_color };
