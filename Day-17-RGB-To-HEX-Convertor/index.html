@@ -10,6 +10,7 @@
   <body>
     <div class="container">
       <div class="row">
+        <label for="user-input">Hex color code (#RRGGBB)</label>
         <input
           type="text"
           placeholder="Hex"
@@ -22,27 +23,25 @@
         <button id="swap-button">Swap</button>
       </div>
       <div class="row">
-        <label for="red">red</label>
-        <input type="text" id="red-color"/>
-        <label for="green">green</label>
-        <input type="text" id="green-color"/>
-        <label for="blue">blue</label>
-        <input type="text" id="blue-color" />
+        <label for="red">Red Color</label>
+        <input type="text" id="red-color" disabled/>
+        <label for="green">Green Color</label>
+        <input type="text" id="green-color" disabled/>
+        <label for="blue">Blue Color</label>
+        <input type="text" id="blue-color" disabled/>
       </div>
       <div class="row">
-        <label for="css_color">css color</label>
+        <label for="css_color">CSS Color</label>
         <input
           type="text"
           id="css-color"
-          value="rgb(12,9,120)"
-          placeholder="rgb(12,9,120)"
           disabled
         />
       </div>
       <div class="row">
-        <textarea name="preview_color" id="result-color" cols="30" rows="2"></textarea>
+        <textarea name="preview_color" id="result-color" cols="40" rows="4" disabled></textarea>
       </div>
     </div>
-    <script src="app.js" type="module"></script>
+    <script src="convert.js" type="module"></script>
   </body>
 </html>
