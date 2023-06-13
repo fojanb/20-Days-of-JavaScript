@@ -9,30 +9,38 @@
   </head>
   <body>
     <div class="container">
-      <input type="text" placeholder="Hex" id="input-hex" minlength="6" maxlength="6" />
-      <button id="convert">Convert</button>
-      <button id="reset">Reset</button>
-      <button id="swap">Swap</button>
-      <div class="rgb">
-        <label for="red">red</label>
-        <input type="text" id="red" disabled />
-        <label for="green">green</label>
-        <input type="text" id="green" disabled />
-        <label for="blue">blue</label>
-        <input type="text" id="blue" disabled />
+      <div class="row">
+        <input
+          type="text"
+          placeholder="Hex"
+          id="user-input"
+          minlength="6"
+          maxlength="6"
+        />
+        <button id="convert-button">Convert</button>
+        <button id="reset-button">Reset</button>
+        <button id="swap-button">Swap</button>
       </div>
-      <div class="css-color">
+      <div class="row">
+        <label for="red">red</label>
+        <input type="text" id="red-color"/>
+        <label for="green">green</label>
+        <input type="text" id="green-color"/>
+        <label for="blue">blue</label>
+        <input type="text" id="blue-color" />
+      </div>
+      <div class="row">
         <label for="css_color">css color</label>
         <input
           type="text"
-          id="css_color"
+          id="css-color"
           value="rgb(12,9,120)"
           placeholder="rgb(12,9,120)"
           disabled
         />
       </div>
-      <div class="preview_color">
-        <textarea name="preview_color" id="" cols="30" rows="2"></textarea>
+      <div class="row">
+        <textarea name="preview_color" id="result-color" cols="30" rows="2"></textarea>
       </div>
     </div>
     <script src="app.js" type="module"></script>

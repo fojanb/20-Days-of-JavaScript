@@ -1,0 +1,33 @@
+:root {
+  --background-color: #e4e4e4;
+  --font-family: system-ui, sans-serif;
+}
+* {
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 50px;
+}
+.container .row {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin: 20px;
+}
+.container .row * {
+  margin: 10px;
+  padding: 5px;
+}
+.container .row button {
+  cursor: pointer;
+}
+.container .row input {
+    color: black;
+  }

@@ -1,9 +1,4 @@
-const hex = document.getElementById("input-hex");
-const convert = document.getElementById("convert");
-const reset = document.getElementById("reset");
-convert.addEventListener("click", () => {
-  console.log(hex.value);
-});
-reset.addEventListener("click", () => {
-  hex.value = "";
-});
+import { userInput } from "./userInput.js";
+import { hex,red_color,green_color,blue_color } from "./convert.js";
+import { resetBtn } from "./reset.js";
+
