@@ -17,21 +17,22 @@
           id="user-input"
           minlength="6"
           maxlength="6"
+          required
         />
         <button id="convert-button">Convert</button>
         <button id="reset-button">Reset</button>
-        <button id="swap-button">Swap</button>
+        <button id="swap-button" disabled>Swap</button>
       </div>
       <div class="row">
-        <label for="red">Red Color</label>
+        <label for="red">Red Color (R)</label>
         <input type="text" id="red-color" disabled/>
-        <label for="green">Green Color</label>
+        <label for="green">Green Color (G)</label>
         <input type="text" id="green-color" disabled/>
-        <label for="blue">Blue Color</label>
+        <label for="blue">Blue Color (B)</label>
         <input type="text" id="blue-color" disabled/>
       </div>
       <div class="row">
-        <label for="css_color">CSS Color</label>
+        <label for="css_color">CSS Color in RGB format</label>
         <input
           type="text"
           id="css-color"

@@ -1,12 +1,14 @@
 :root {
   --background-color: #fafafa;
   --font-family: system-ui, sans-serif;
+  --font-size:18px;
 }
 * {
   box-sizing: border-box;
   font-family: var(--font-family);
   background-color: var(--background-color);
   color: black;
+  font-size: var(--font-size);
 }
 
 .container {
