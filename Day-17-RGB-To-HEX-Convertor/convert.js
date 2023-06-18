@@ -1,10 +1,11 @@
 import { userInput } from "./userInput.js";
 import { resetBtn } from "./reset.js";
+import { swapBtn } from "./swap.js";
 let hex;
 const red = document.getElementById("red-color");
 const green = document.getElementById("green-color");
 const blue = document.getElementById("blue-color");
-const rgb_background_color = document.getElementById("result-color");
+const textarea = document.getElementById("result");
 const result = document.getElementById("css-color");
 const convertBtn = document.getElementById("convert-button");
 convertBtn.addEventListener("click", (e) => {
@@ -18,7 +19,7 @@ convertBtn.addEventListener("click", (e) => {
     green.value = parseInt(hex.substring(2, 4), 16);
     blue.value = parseInt(hex.substring(4, 6), 16);
     result.value = `rgb(${red.value},${green.value},${blue.value})`;
-    rgb_background_color.style.fill = `#${hex}`;
+    textarea.style.backgroundColor = `#${hex}`;
   }
 });
-export { red, green, blue, result, rgb_background_color };
+export { red, green, blue, result, textarea };

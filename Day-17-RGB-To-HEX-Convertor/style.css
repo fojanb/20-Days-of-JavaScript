@@ -1,5 +1,5 @@
 :root {
-  --background-color: #f9dcc4;
+  --background-color: #ffffff;
   --font-family: system-ui, sans-serif;
   --font-size: 18px;
 }
@@ -7,49 +7,32 @@
   box-sizing: border-box;
   font-family: var(--font-family);
   background-color: var(--background-color);
-  color: #805d64;
+  color: #5f5e5e;
   font-size: var(--font-size);
   font-weight: 500;
 }
-
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  padding: 10px;
 }
 .container .row {
   display: flex;
   flex-direction: row;
-  text-align: center;
-  margin: 20px;
-}
-.container .row *,
-.container .row-rgb * {
+  text-align: left;
   margin: 10px;
+}
+.container .row * {
   padding: 5px;
 }
-.container .row-rgb {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  margin: 20px;
-  width: 50%;
-}
-.container .row-rgb div{
-  display: flex;
-  justify-content: space-between;
-  width: 60%;
-}
-
 .container .row button {
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  color: #f9dcc4;
+  color: #5f5e5e;
+  border: 1px solid rgb(199, 199, 199);
 }
-.container .row input,
-.container .row-rgb input {
+.container .row input {
   color: #1d3461;
   appearance: none;
   outline: none;
@@ -57,24 +40,31 @@
   border-radius: 5px;
   background-color: white;
 }
+#user-input {
+  border: 1px solid rgb(199, 199, 199);
+}
 #convert-button {
-  background-color: #b5838d;
+  background-color: #eae4e9;
 }
 #reset-button {
-  background-color: #e5989b;
+  background-color: #eae4e9;
 }
 #swap-button {
-  background-color: #e08c77;
+  background-color: #eae4e9;
 }
 #red-color {
-  background-color: rgba(255, 0, 0, 0.208);
+  background-color: rgba(255, 0, 0, 0.2);
 }
 #green-color {
-  background-color: rgba(129, 178, 154, 0.2);
+  background-color: rgba(0, 255, 132, 0.2);
 }
 #blue-color {
-  background-color: rgba(58, 134, 255, 0.2);
+  background-color: rgba(0, 68, 255, 0.2);
 }
 #css-color {
-  background-color: #f9dcc4;
+  border: 1px solid rgb(199, 199, 199);
+}
+.last_row {
+  grid-column: 1 / span 2;
+  margin: 0 auto;
 }
