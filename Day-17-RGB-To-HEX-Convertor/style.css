@@ -2,12 +2,14 @@
   --background-color: #ffffff;
   --font-family: system-ui, sans-serif;
   --font-size: 18px;
+  --font-color: #5f5e5e;
+  --border: 1px solid rgb(199, 199, 199);
 }
 * {
   box-sizing: border-box;
   font-family: var(--font-family);
   background-color: var(--background-color);
-  color: #5f5e5e;
+  color: var(--font-color);
   font-size: var(--font-size);
   font-weight: 500;
 }
@@ -29,8 +31,8 @@
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  color: #5f5e5e;
-  border: 1px solid rgb(199, 199, 199);
+  color: var(--font-color);
+  border: var(--border);
 }
 .container .row input {
   color: #1d3461;
@@ -41,14 +43,10 @@
   background-color: white;
 }
 #user-input {
-  border: 1px solid rgb(199, 199, 199);
+  border: var(--border);
 }
-#convert-button {
-  background-color: #eae4e9;
-}
-#reset-button {
-  background-color: #eae4e9;
-}
+#convert-button,
+#reset-button,
 #swap-button {
   background-color: #eae4e9;
 }
@@ -62,7 +60,7 @@
   background-color: rgba(0, 68, 255, 0.2);
 }
 #css-color {
-  border: 1px solid rgb(199, 199, 199);
+  border: var(--border);
 }
 .last_row {
   grid-column: 1 / span 2;
