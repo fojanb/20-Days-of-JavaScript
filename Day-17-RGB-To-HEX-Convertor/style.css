@@ -2,7 +2,7 @@
   --background-color: #ffffff;
   --font-family: system-ui, sans-serif;
   --font-size: 18px;
-  --font-color: #5f5e5e;
+  --font-color: #000;
   --border: 1px solid rgb(199, 199, 199);
 }
 * {
@@ -52,15 +52,19 @@
 }
 #red-color {
   background-color: rgba(255, 0, 0, 0.2);
+  color: #777777;
 }
 #green-color {
   background-color: rgba(0, 255, 132, 0.2);
+  color: #777777;
 }
 #blue-color {
   background-color: rgba(0, 68, 255, 0.2);
+  color: #777777;
 }
 #css-color {
-  border: var(--border);
+  border: 2px dashed rgb(199, 199, 199);
+  color: #777777;
 }
 .last_row {
   grid-column: 1 / span 2;
