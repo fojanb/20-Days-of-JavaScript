@@ -11,6 +11,7 @@ const convertBtn = document.getElementById("convert-button");
 convertBtn.addEventListener("click", (e) => {
   if (!userInput.value) {
     e.preventDefault();
+    alert("Please Enter a Valid Hex Code.")
   } else {
     // Step-1-Convert the user's input string to the hex mode
     hex = userInput.value.toString(16);

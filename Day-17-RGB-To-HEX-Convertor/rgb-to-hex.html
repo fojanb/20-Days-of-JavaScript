@@ -8,43 +8,42 @@
   </head>
   <body>
     <div class="container">
-      <div class="row-rgb">
-        <div>
-          <label for="red">Red Color (R)</label>
-          <input type="text" id="red-color" />
-        </div>
-        <div>
-          <label for="green">Green Color (G)</label>
-          <input type="text" id="green-color" />
-        </div>
-        <div>
-          <label for="blue">Blue Color (B)</label>
-          <input type="text" id="blue-color" />
-        </div>
+      
+      
+      <div class="row">
+        <label for="red">Enter Red Color (R)</label>
       </div>
+      <div class="row">
+        <input type="text" id="red-color"/>
+      </div>
+      <div class="row">
+        <label for="green">Enter Green Color (G)</label>
+      </div>
+      <div class="row"><input type="text" id="green-color"/></div>
+      <div class="row">
+        <label for="blue">Enter Blue Color (B)</label>
+      </div>
+      <div class="row"><input type="text" id="blue-color"/></div>
+      <div class="row">
+        <label for="css_color">CSS Color in HEX Format</label>
+      </div>
+      <div class="row"><input type="text" id="css-color" disabled /></div>
       <div class="row">
         <a><button id="convert-button">Convert</button></a>
         <a><button id="reset-button">Reset</button></a>
         <a href="/index.html"><button id="swap-button">Swap</button></a>
       </div>
-      <div class="row">
-        <label for="css_color">CSS Color in<br />HEX format</label>
-        <input type="text" id="css-color" disabled />
-      </div>
-      <div class="row">
-        <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
-          <path
-            id="result-color"
-            style="
-              fill: #ffffff;
-              width: 100px;
-              height: 100px;
-              border: 2px solid black;
-            "
-            d="M39.7,-54.3C54.4,-52.5,71,-46.2,77.6,-34.6C84.2,-23,80.7,-6,74.9,8.4C69.2,22.8,61.2,34.4,52.9,48.3C44.7,62.1,36.2,78.2,22.9,85.4C9.7,92.7,-8.3,91.2,-23.6,84.7C-38.8,78.2,-51.2,66.7,-58.4,53.4C-65.5,40.1,-67.3,25,-67,11.1C-66.7,-2.8,-64.4,-15.6,-58.9,-26.6C-53.4,-37.6,-44.8,-47,-34.5,-50.8C-24.1,-54.6,-12.1,-52.9,0.2,-53.2C12.6,-53.6,25.1,-56.1,39.7,-54.3Z"
-            transform="translate(100 100)"
-          />
-        </svg>
+      <div class="row"></div>
+      <div class="row">Preview Color&nbsp;:</div>
+      <div class="row last_row">
+        <textarea
+          name="result"
+          id="result"
+          cols="56"
+          rows="5"
+          style="background-color: transparent; border-radius: 5px"
+          disabled
+        ></textarea>
       </div>
     </div>
     <script src="convert.js" type="module"></script>
