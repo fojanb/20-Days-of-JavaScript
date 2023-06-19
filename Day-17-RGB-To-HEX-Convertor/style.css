@@ -12,6 +12,13 @@
   color: var(--font-color);
   font-size: var(--font-size);
   font-weight: 500;
+  border-radius: 5px;
+}
+body {
+  margin: 50px;
+}
+body h1 {
+  font-weight: bolder;
 }
 .container {
   display: grid;
@@ -22,7 +29,7 @@
   display: flex;
   flex-direction: row;
   text-align: left;
-  margin: 10px;
+  padding: 10px;
 }
 .container .row * {
   padding: 5px;
@@ -30,39 +37,45 @@
 .container .row button {
   cursor: pointer;
   border: none;
-  border-radius: 5px;
   color: var(--font-color);
   border: var(--border);
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .container .row input {
   color: #1d3461;
   appearance: none;
   outline: none;
   border: none;
-  border-radius: 5px;
   background-color: white;
 }
 #user-input {
   border: var(--border);
 }
 #convert-button,
+#convert-btn,
 #reset-button,
+#reset-btn,
 #swap-button {
   background-color: #eae4e9;
 }
-#red-color {
+#red-color,
+#red {
   background-color: rgba(255, 0, 0, 0.2);
   color: #777777;
 }
-#green-color {
+#green-color,
+#green {
   background-color: rgba(0, 255, 132, 0.2);
   color: #777777;
 }
-#blue-color {
+#blue-color,
+#blue {
   background-color: rgba(0, 68, 255, 0.2);
   color: #777777;
 }
-#css-color {
+#css-color,
+#css-color-rgb {
   border: 2px dashed rgb(199, 199, 199);
   color: #777777;
 }

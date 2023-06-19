@@ -7,30 +7,54 @@
     <title>RGB to HEX Convertor</title>
   </head>
   <body>
+    <h1>RGB to HEX Convertor</h1>
     <div class="container">
-      
-      
       <div class="row">
         <label for="red">Enter Red Color (R)</label>
       </div>
       <div class="row">
-        <input type="text" id="red-color"/>
+        <input
+          type="text"
+          id="red-color"
+          minlength="3"
+          maxlength="3"
+          autocomplete="off"
+          required
+        />
       </div>
       <div class="row">
         <label for="green">Enter Green Color (G)</label>
       </div>
-      <div class="row"><input type="text" id="green-color"/></div>
+      <div class="row">
+        <input
+          type="text"
+          id="green-color"
+          minlength="3"
+          maxlength="3"
+          autocomplete="off"
+          required
+        />
+      </div>
       <div class="row">
         <label for="blue">Enter Blue Color (B)</label>
       </div>
-      <div class="row"><input type="text" id="blue-color"/></div>
+      <div class="row">
+        <input
+          type="text"
+          id="blue-color"
+          minlength="3"
+          maxlength="3"
+          autocomplete="off"
+          required
+        />
+      </div>
       <div class="row">
         <label for="css_color">CSS Color in HEX Format</label>
       </div>
-      <div class="row"><input type="text" id="css-color" disabled /></div>
+      <div class="row"><input type="text" id="css-color-rgb" disabled /></div>
       <div class="row">
-        <a><button id="convert-button">Convert</button></a>
-        <a><button id="reset-button">Reset</button></a>
+        <a><button id="convert-btn">Convert</button></a>
+        <a><button id="reset-btn">Reset</button></a>
         <a href="/index.html"><button id="swap-button">Swap</button></a>
       </div>
       <div class="row"></div>
@@ -38,7 +62,7 @@
       <div class="row last_row">
         <textarea
           name="result"
-          id="result"
+          id="result-rgb"
           cols="56"
           rows="5"
           style="background-color: transparent; border-radius: 5px"
@@ -46,6 +70,6 @@
         ></textarea>
       </div>
     </div>
-    <script src="convert.js" type="module"></script>
+    <script src="rgb_to_hex.js" type="module"></script>
   </body>
 </html>

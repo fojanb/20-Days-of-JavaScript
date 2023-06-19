@@ -1,6 +1,5 @@
 import { userInput } from "./userInput.js";
 import { resetBtn } from "./reset.js";
-import { swapBtn } from "./swap.js";
 let hex;
 const red = document.getElementById("red-color");
 const green = document.getElementById("green-color");
