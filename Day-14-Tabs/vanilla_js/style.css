@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lilita One", cursive;
+  background-color: #e2c3c8;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+}
+.nav-bar {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  color: #5f7daf;
+  background-color: #afafc7;
+  width: 50%;
+  align-items: center;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+  width:100%;
+}
+
+article {
+  background-color: #f7dfd3;
+  color: rgb(108, 108, 108);
+  padding: 15px 20px;
+  min-height: 70vh;
+  width: 50%;
+}
+article p {
+    text-align: justify;
+    line-height:25px;
+}
+.active_tab {
+    background-color: #f7dfd3;
+    color:#5f7daf;
+    padding: 10px;
+}
+
+
+.animated {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
