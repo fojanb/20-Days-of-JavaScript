@@ -1,80 +1,85 @@
 :root {
-  --background-color: #f9dcc4;
+  --background-color: #ffffff;
   --font-family: system-ui, sans-serif;
   --font-size: 18px;
+  --font-color: #000;
+  --border: 1px solid rgb(199, 199, 199);
 }
 * {
   box-sizing: border-box;
   font-family: var(--font-family);
   background-color: var(--background-color);
-  color: #805d64;
+  color: var(--font-color);
   font-size: var(--font-size);
   font-weight: 500;
+  border-radius: 5px;
 }
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+body {
   margin: 50px;
+}
+body h1 {
+  font-weight: bolder;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  padding: 10px;
 }
 .container .row {
   display: flex;
   flex-direction: row;
-  text-align: center;
-  margin: 20px;
+  text-align: left;
+  padding: 10px;
 }
-.container .row *,
-.container .row-rgb * {
-  margin: 10px;
+.container .row * {
   padding: 5px;
 }
-.container .row-rgb {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  margin: 20px;
-  width: 50%;
-}
-.container .row-rgb div{
-  display: flex;
-  justify-content: space-between;
-  width: 60%;
-}
-
 .container .row button {
   cursor: pointer;
   border: none;
-  border-radius: 5px;
-  color: #f9dcc4;
+  color: var(--font-color);
+  border: var(--border);
+  padding-left: 15px;
+  padding-right: 15px;
 }
-.container .row input,
-.container .row-rgb input {
+.container .row input {
   color: #1d3461;
   appearance: none;
   outline: none;
   border: none;
-  border-radius: 5px;
   background-color: white;
 }
-#convert-button {
-  background-color: #b5838d;
+#user-input {
+  border: var(--border);
 }
-#reset-button {
-  background-color: #e5989b;
-}
+#convert-button,
+#convert-btn,
+#reset-button,
+#reset-btn,
 #swap-button {
-  background-color: #e08c77;
+  background-color: #eae4e9;
 }
-#red-color {
-  background-color: rgba(255, 0, 0, 0.208);
+#red-color,
+#red {
+  background-color: rgba(255, 0, 0, 0.2);
+  color: #777777;
 }
-#green-color {
-  background-color: rgba(129, 178, 154, 0.2);
+#green-color,
+#green {
+  background-color: rgba(0, 255, 132, 0.2);
+  color: #777777;
 }
-#blue-color {
-  background-color: rgba(58, 134, 255, 0.2);
+#blue-color,
+#blue {
+  background-color: rgba(0, 68, 255, 0.2);
+  color: #777777;
 }
-#css-color {
-  background-color: #f9dcc4;
+#css-color,
+#css-color-rgb {
+  border: 2px dashed rgb(199, 199, 199);
+  color: #777777;
+}
+.last_row {
+  grid-column: 1 / span 2;
+  margin: 0 auto;
 }
