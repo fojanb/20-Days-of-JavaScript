@@ -1,6 +1,6 @@
 :root {
   --ff: "Open Sans", sans-serif;
-  --fs:large;
+  --fs: large;
   --bg-color: #00273d;
   --fc-color: #f0f8ff;
   --margin: 20px auto;
@@ -8,7 +8,7 @@
   --bc-expenseForm: #713232;
   --bg-input: #183548;
   --bg-input-focus: #b7c4cc;
-  --br:5px;
+  --br: 5px;
 }
 body {
   font-family: var(--ff);
@@ -47,7 +47,6 @@ body {
   align-items: center;
   text-align: center;
   margin: 5px auto;
-
 }
 .leftCell #budget-form,
 .leftCell #expense-form {
@@ -117,4 +116,15 @@ input:focus {
     gap: 2rem;
     padding: var(--br) 25px;
   }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -150px;
 }

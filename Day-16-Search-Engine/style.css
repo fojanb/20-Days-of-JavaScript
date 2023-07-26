@@ -11,9 +11,9 @@
 }
 body {
   font-family: "Lilita One", cursive;
-  background-color:#4a4e69;
+  background-color: #4a4e69;
   margin: 50px auto;
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 .wrapper {
   display: flex;
@@ -53,31 +53,31 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(4, 300px);
   grid-template-rows: auto;
-  grid-gap:20px;
+  grid-gap: 20px;
   margin: 50px auto;
   align-items: center;
   justify-content: center;
 }
-@media screen and (max-width:800px) {
-  .holder{
-    grid-template-columns: repeat(1,300px);
+@media screen and (max-width: 800px) {
+  .holder {
+    grid-template-columns: repeat(1, 300px);
     margin: 0 auto;
-    grid-gap:5px;
+    grid-gap: 5px;
   }
 }
 
-@media screen and (min-width:700px) and (max-width:900px) {
-  .holder{
-    grid-template-columns: repeat(2,300px);
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .holder {
+    grid-template-columns: repeat(2, 300px);
     margin: 0 auto;
-    grid-gap:5px;
+    grid-gap: 5px;
   }
 }
-@media screen and (min-width:900px) and (max-width:1200px) {
-  .holder{
-    grid-template-columns: repeat(3,300px);
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  .holder {
+    grid-template-columns: repeat(3, 300px);
     margin: 0 auto;
-    grid-gap:5px;
+    grid-gap: 5px;
   }
 }
 .frame {
@@ -101,7 +101,17 @@ button:hover {
 .frame span {
   color: #4e6594;
   position: absolute;
-  left:0;
+  left: 0;
   bottom: 0;
   margin: 20px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #7a859c;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -150px;
 }

@@ -13,3 +13,13 @@ h3 {
   text-align: center;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3d3867;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -150px;
+}

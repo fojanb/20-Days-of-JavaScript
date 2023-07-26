@@ -86,3 +86,13 @@ body {
   width: 40%;
   height: 20vh;
 }
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #809af0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -150px;
+}

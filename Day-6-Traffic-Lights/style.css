@@ -43,21 +43,30 @@ body {
 }
 .red {
   background-color: #9f3115;
-  box-shadow: rgba(159, 49, 21,0.8) 0px 22px 70px 4px;
+  box-shadow: rgba(159, 49, 21, 0.8) 0px 22px 70px 4px;
   border: none;
 }
 .yellow {
   background-color: #d4e96a;
-  box-shadow: rgba(212, 233, 106,0.8) 0px 22px 70px 4px;
+  box-shadow: rgba(212, 233, 106, 0.8) 0px 22px 70px 4px;
   border: none;
 }
 .green {
   background-color: #0ca974;
-  box-shadow: rgba(12, 169, 116,0.8) 0px 22px 70px 4px;
+  box-shadow: rgba(12, 169, 116, 0.8) 0px 22px 70px 4px;
   border: none;
 }
 .off {
   background-color: #161723;
   box-shadow: none;
-  
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -150px;
 }

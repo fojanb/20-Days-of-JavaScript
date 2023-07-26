@@ -23,4 +23,13 @@ body {
 .sun {
   background-color: white;
 }
-
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#a39cbe;
+  position: absolute;
+  bottom: 0;
+  left:50%;
+  margin-left:-150px;
+}

@@ -42,10 +42,10 @@ body {
 }
 .container button:hover {
   cursor: pointer;
-  color:#cd8987;
-  background-color:#1d2d44;
+  color: #cd8987;
+  background-color: #1d2d44;
 }
-.container button{
+.container button {
   background-color: #cd8987;
   font-weight: bold;
   color: #1d2d44;
@@ -55,4 +55,14 @@ body {
   display: none;
   color: #cd8987;
   font-weight: bolder;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -150px;
 }
