@@ -1,29 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Gaegu:wght@700&display=swap");
 html {
-  background-color: #312244;
+  background-color: #d0d5f7;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-family: "Concert One", cursive;
+  font-family: "Gaegu", cursive;
+  font-size: 20px;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background-color: #144552;
-  color: #b7a9cb;
+  background-color: #b8cfec;
+  color: #000000;
   width: 30%;
   height: 100%;
   margin: 50px auto;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 10px 10px black;
 }
 .container header {
-  background-color: #312244;
+  background-color: black;
   text-align: center;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   font-size: 30px;
   letter-spacing: 5px;
   padding: 20px 0;
+  color: white;
 }
 .container button {
   display: flex;
@@ -32,11 +36,12 @@ html {
   margin-top: 20px;
   border: none;
   border-radius: 5px;
-  background-color: #006466;
+  background-color: #d4f0f7;
   height: 40px;
-  font-weight: inherit;
-  color: inherit;
-  letter-spacing: 2px;
+  color: black;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: large;
 }
 .bill,
 .headCount {
@@ -58,6 +63,7 @@ html {
   border: none;
   height: 20px;
   padding-left: 10px;
+  border: 1px solid black;
 }
 .bill input:focus,
 .headCount input:focus,
@@ -66,14 +72,13 @@ select {
   border: none;
   outline: none;
 }
-.headCount{
+.headCount {
   position: relative;
 }
 .headCount i {
   position: absolute;
   bottom: 0;
 }
-
 .icon {
   padding: 10px;
   min-width: 20px;
@@ -81,14 +86,13 @@ select {
 form select {
   border-radius: 5px;
 }
-footer{
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  color:#ffffff;
+  color: #5e7591;
   position: absolute;
   bottom: 0;
-  left:50%;
-  margin-left:-150px;
+  left: 50%;
+  margin-left: -150px;
 }
-
