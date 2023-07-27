@@ -5,3 +5,8 @@ QR code is a graphic consisting of black dots and squares. The QR code is create
 
 ### :heavy_check_mark: Use of QR codes
 QR codes are used to hide information from humans. It is used with many applications especially for doing payments. These codes are like barcodes and are only machine-readable. The digital device can read the information via scanning the QR code.
+
+### :heavy_check_mark: npm packages used in this app :
+- "express": "^4.18.2"
+- "nodemon": "^3.0.1"
+- "qrcode":  "^1.5.3"
