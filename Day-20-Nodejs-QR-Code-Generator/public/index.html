@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <title>QR Code Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>QR Code Generator</h1>
+      <div class="content">Enter your content and generate QR</div>
+      <form id="qr-form">
+        <input
+          id="qr-content"
+          type="text"
+          name="content"
+          placeholder="Sample"
+          autocomplete="off"
+          value=""
+          required
+        />
+        <button type="submit">Generate</button>
+      </form>
+      <img src="./assets/sample-qr-code-img.png" alt="qr-code" id="qr-code">
+    </div>
+    <footer>
+      <img src="favicon.png" alt="Logo" width="50px" height="50px" />Made by
+      Fojan Babaali
+    </footer>
+    <script type="module" src="app-browser.js"></script>
+  </body>
+</html>

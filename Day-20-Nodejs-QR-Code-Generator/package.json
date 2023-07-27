@@ -1,0 +1,17 @@
+{
+  "name": "day-20-qr-code-generator",
+  "version": "1.0.0",
+  "description": "QR codes is short for “Quick Response code”. These codes are used to store information. The information is stored in the pixels of a square-shaped grid. QR codes are the type of barcodes that can be read by image-oriented digital devices, such as a digital camera. Almost every modern smartphone has a built-in QR reader that we use to do payments, open applications, download apps, for E-commerce, and so on.",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "qrcode": "^1.5.3"
+  }
+}
