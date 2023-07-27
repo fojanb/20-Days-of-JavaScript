@@ -4,10 +4,10 @@
   font-family: "Concert One", cursive;
 }
 body {
-  background-color: #cbaacb;
+  background-color: #abbae6;
 }
 .container {
-  background-color: #abdee6;
+  background-color: #abcbe6;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,8 +24,7 @@ body {
   font-size: 30px;
 }
 .container h1 {
-  color: #ffffb5;
-  -webkit-text-stroke: 0.01rem black;
+  color: #000000;
   font-size: 40px;
 }
 .container form button {
@@ -34,29 +33,31 @@ body {
   border: 1px solid black;
   border-radius: 5px;
   font-weight: bold;
-  color: #b1a4d2;
-  -webkit-text-stroke: 0.01rem black;
+  color: black;
+}
+.container form button:hover {
+  -webkit-text-stroke: 0.01rem rgb(0, 0, 0);
   cursor: pointer;
+  color: #ffccb6;
 }
 .container form input {
-  background-color: #ffffb5;
+  background-color: #fff;
   padding: 20px;
   border: 1px solid black;
   border-radius: 5px;
-  -webkit-text-stroke: 0.01rem black;
-  color:rgb(87, 86, 86);
+  color: rgb(87, 86, 86);
 }
 .container .content {
-  color: rgb(255, 255, 255);
-  -webkit-text-stroke: 0.07rem black;
+  color: #ffffb5;
+  -webkit-text-stroke: 0.05rem rgba(0, 0, 0, 1);
 }
-footer{
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  color:#25253F;
+  color: #25253f;
   position: absolute;
   bottom: 0;
-  left:50%;
-  margin-left:-150px;
+  left: 50%;
+  margin-left: -150px;
 }
