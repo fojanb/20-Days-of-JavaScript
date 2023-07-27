@@ -1,0 +1,1 @@
+All the files/folders in ./public have used by frontend (browser environment)
