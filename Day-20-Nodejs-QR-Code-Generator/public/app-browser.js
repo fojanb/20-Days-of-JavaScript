@@ -4,6 +4,11 @@ let inputValue;
 usersecret.addEventListener("change", (e) => {
   inputValue = e.target.value;
 });
+const showQR = (src) => {
+  document.getElementById("qr-code").style.display = "block";
+  document.getElementById("qr-code").src = src;
+  usersecret.value = "";
+};
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   try {
@@ -18,7 +23,7 @@ form.addEventListener("submit", async (e) => {
       }),
     });
     const data = await response.json();
-    document.getElementById("qr-code").src = data.src;
+    showQR(data.src);
   } catch (error) {
     console.log(error);
   }
