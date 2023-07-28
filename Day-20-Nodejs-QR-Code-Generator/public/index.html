@@ -10,21 +10,39 @@
   </head>
   <body>
     <div class="container">
-      <h1>QR Code Generator</h1>
-      <div class="content">Enter your content and generate QR</div>
+      <h1>
+        <span
+          style="
+            color: #8484db;
+            font-size: 25px;
+            -webkit-text-stroke: 0.01rem rgb(0, 0, 0);
+          "
+          >✿&nbsp;</span
+        ><span id="main-title">QR Code Generator</span
+        ><span
+          style="
+            color: #8484db;
+            font-size: 25px;
+            -webkit-text-stroke: 0.01rem rgb(0, 0, 0);
+          "
+          >&nbsp;✿</span
+        >
+      </h1>
+      <div class="content">Enter your content and generate QR code</div>
       <form id="qr-form">
         <input
           id="qr-content"
           type="text"
           name="content"
-          placeholder="Type a secret here ..."
+          placeholder="Type a secret ..."
           autocomplete="off"
           value=""
           required
         />
         <button type="submit">Generate</button>
+        <input type="button" value="Reset" />
       </form>
-      <img src="" alt="qr-code" style="display:none;" id="qr-code">
+      <img src="" alt="qr-code" style="display: none" id="qr-code" />
     </div>
     <footer>
       <img src="favicon.png" alt="Logo" width="50px" height="50px" />Made by

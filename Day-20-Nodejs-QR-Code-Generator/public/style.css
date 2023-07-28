@@ -1,13 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Gaegu:wght@700&display=swap");
+
 * {
   box-sizing: border-box;
-  font-family: "Concert One", cursive;
+  /* font-family: "Concert One", cursive; */
+  /* font-family: "Concert One", cursive; */
+  font-family: "Gaegu", cursive;
 }
 body {
-  background-color: #abbae6;
+  background-color: #cbaacb;
 }
 .container {
-  background-color: #abcbe6;
+  background-color: #abdee6;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,32 +29,45 @@ body {
   font-size: 30px;
 }
 .container h1 {
+  margin-bottom: 50px;
+}
+.container h1 #main-title {
   color: #000000;
   font-size: 40px;
+  -webkit-text-stroke: 0.05rem rgb(0, 0, 0);
 }
 .container form button {
-  background-color: #ffccb6;
-  padding: 20px;
+  background-color: #fbfb9c;
+  padding: 10px;
   border: 1px solid black;
   border-radius: 5px;
   font-weight: bold;
-  color: black;
+  -webkit-text-stroke: 0.01rem rgb(0, 0, 0);
+  box-shadow: 5px 5px;
+
 }
 .container form button:hover {
-  -webkit-text-stroke: 0.01rem rgb(0, 0, 0);
   cursor: pointer;
-  color: #ffccb6;
+  color: #00000083;
 }
 .container form input {
-  background-color: #fff;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid black;
   border-radius: 5px;
-  color: rgb(87, 86, 86);
+}
+.container form input[type="button"] {
+  background-color: #b5ffc0;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px;
 }
 .container .content {
-  color: #ffffb5;
-  -webkit-text-stroke: 0.05rem rgba(0, 0, 0, 1);
+  /* color: #000000;
+  -webkit-text-stroke: 0.05rem rgba(0, 0, 0, 1); */
+  color: #3d6bc7;
+  font-size: 35px;
+  -webkit-text-stroke: 0.05rem rgb(0, 0, 0);
 }
 footer {
   display: flex;
