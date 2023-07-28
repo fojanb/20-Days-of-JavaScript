@@ -1,15 +1,13 @@
 const express = require("express");
-const QRCode = require("qrcode");
 const server = express();
-server.use(express.static("./public"));
+const qrcodeRouter = require("./routes/qrcode");
 const PORT = 3000;
+
+server.use(express.static("./public"));
 server.use(express.json());
-server.post("/api/v1/qrcode", (req, res) => {
-  let { secret } = req.body;
-  QRCode.toDataURL(secret, function (err, url) {
-    res.status(200).json({ success: true, src: url });
-  });
-});
+server.use(express.urlencoded({ extended: false }));
+server.use("/api/v1", qrcodeRouter);
+
 server.listen(PORT, () =>
   console.log(`Server is running on http://localhost:${PORT}`)
 );
