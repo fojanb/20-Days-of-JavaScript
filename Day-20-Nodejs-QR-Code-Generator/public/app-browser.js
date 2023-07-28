@@ -1,5 +1,6 @@
 const usersecret = document.getElementById("qr-content");
 const form = document.getElementById("qr-form");
+const reset = document.getElementById("reset");
 let inputValue;
 usersecret.addEventListener("change", (e) => {
   inputValue = e.target.value;
@@ -7,8 +8,12 @@ usersecret.addEventListener("change", (e) => {
 const showQR = (src) => {
   document.getElementById("qr-code").style.display = "block";
   document.getElementById("qr-code").src = src;
-  usersecret.value = "";
 };
+const resetQR = () => {
+  usersecret.value = "";
+  document.getElementById("qr-code").style.display = "none";
+};
+reset.addEventListener("click", resetQR);
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   try {
