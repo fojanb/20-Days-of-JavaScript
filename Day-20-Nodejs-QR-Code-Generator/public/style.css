@@ -1,11 +1,6 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap"); */
-
 @import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Gaegu:wght@700&display=swap");
-
 * {
   box-sizing: border-box;
-  /* font-family: "Concert One", cursive; */
-  /* font-family: "Concert One", cursive; */
   font-family: "Gaegu", cursive;
 }
 body {
@@ -19,7 +14,7 @@ body {
   justify-content: center;
   border: 1px solid black;
   border-radius: 5px;
-  width: 50%;
+  width: 55%;
   margin: 50px auto;
   padding: 20px;
   box-shadow: 10px 10px;
@@ -27,9 +22,13 @@ body {
 .container * {
   margin: 15px;
   font-size: 30px;
+  text-align: center;
 }
 .container h1 {
   margin-bottom: 50px;
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: center;
 }
 .container h1 #main-title {
   color: #000000;
@@ -44,7 +43,6 @@ body {
   font-weight: bold;
   -webkit-text-stroke: 0.01rem rgb(0, 0, 0);
   box-shadow: 5px 5px;
-
 }
 .container form button:hover {
   cursor: pointer;
@@ -63,11 +61,14 @@ body {
   box-shadow: 5px 5px;
 }
 .container .content {
-  /* color: #000000;
-  -webkit-text-stroke: 0.05rem rgba(0, 0, 0, 1); */
   color: #3d6bc7;
   font-size: 35px;
   -webkit-text-stroke: 0.05rem rgb(0, 0, 0);
+}
+.flower {
+  color: #d996df;
+  font-size: 25px;
+  -webkit-text-stroke: 0.01rem rgb(0, 0, 0);
 }
 footer {
   display: flex;
@@ -78,4 +79,27 @@ footer {
   bottom: 0;
   left: 50%;
   margin-left: -150px;
+}
+@media screen and (max-width: 975px) {
+  .container h1 #main-title {
+    font-size: 30px;
+  }
+  .container {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 827px) {
+  .container * {
+    margin: 15px;
+    font-size: 20px;
+  }
+  .container h1 #main-title {
+    font-size: 25px;
+  }
+  .container {
+    width: 80%;
+  }
+  .container .content {
+    font-size: 25px;
+  }
 }
