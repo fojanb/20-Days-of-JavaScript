@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Barriecito&display=swap");
+* {
+  font-family: "Barriecito", cursive;
+}
+html {
+  background-color: #213145;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 50px auto;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 20px auto;
+  background-color: #5d4a66;
+  width: 320px;
+  height: 320px;
+  gap: 10px;
+  padding: 10px;
+}
+.board .cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cc89b06a;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+#title {
+  text-align: center;
+  font-size: 48px;
+  color: #4f7b8f;
+  margin: 0 auto;
+  padding: 20px;
+  letter-spacing: 4px;
+}
+button[type="reset"] {
+  margin: 40px auto;
+  cursor: pointer;
+  padding: 15px;
+  background-color: inherit;
+  letter-spacing: 3px;
+  border: 2px solid #5da980;
+  outline: none;
+  color: #5da980;
+  font-size: 25px;
+}
+button[type="reset"]:hover {
+    border: 2px solid #fbbe24;
+    color: #fbbe24;
+}
