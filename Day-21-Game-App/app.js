@@ -8,15 +8,15 @@ const renderCells = (board) => {
         e.preventDefault();
       } else {
         e.target.classList.add("clicked");
-        e.target.innerHTML = `<span style="font-weight:bold;font-size:40px;color:#fbbe24;font-family:Verdana;">X</span>`;
+        e.target.innerHTML = `<span class="user_move">X</span>`;
         if (e.target.id === "4") {
           let targ = [...board].filter((cell) => cell.id !== "4");
           let randomeCell = targ[Math.floor(Math.random() * targ.length)];
           randomeCell.classList.add("clicked");
-          randomeCell.innerHTML = `<span style="font-size:40px;color:#fefefe;font-family:Verdana;">O</span>`;
+          randomeCell.innerHTML = `<span class="app_move">O</span>`;
         }else{
             [...board][4].classList.add("clicked");
-            [...board][4].innerHTML = `<span style="font-size:40px;color:#fefefe;font-family:Verdana;">O</span>`;
+            [...board][4].innerHTML = `<span class="app_move">O</span>`;
         }
       }
     });

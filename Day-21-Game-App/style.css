@@ -57,6 +57,17 @@ button[type="reset"] {
   font-size: 25px;
 }
 button[type="reset"]:hover {
-    border: 2px solid #fbbe24;
-    color: #fbbe24;
+  border: 2px solid #fbbe24;
+  color: #fbbe24;
+}
+.user_move {
+  font-weight: bold;
+  font-size: 40px;
+  color: #fbbe24;
+  font-family: Verdana;
+}
+.app_move {
+  font-size: 40px;
+  color: #fff;
+  font-family: Verdana;
 }
