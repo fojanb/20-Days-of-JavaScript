@@ -16,7 +16,7 @@ const renderCells = (board) => {
           randomeCell.innerHTML = `<span class="app_move">O</span>`;
         }else{
             [...board][4].classList.add("clicked");
-            [...board][4].innerHTML = `<span class="app_move">O</span>`;
+            [...board][4].innerHTML = `<span class="app_move">O</span>`;  
         }
       }
     });
