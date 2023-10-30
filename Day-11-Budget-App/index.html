@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/x-icon" href="./favicon.png">
+    <link rel="icon" type="image/x-icon" href="./favicon.png" />
     <title>Budget App</title>
   </head>
   <body>
@@ -22,33 +22,24 @@
           <form id="budget-form">
             <label for="budget">Please Enter Your Budget</label>
             <input
+              id="budget"
               type="number"
-              name=""
+              name="budget"
               placeholder="$ Budget"
               value=""
               required
             />
-            <button type="submit">Calculate</button>
-          </form>
-          <form id="expense-form">
-            <label for="budget">Please Enter Your Expense Title</label>
-            <input
-              type="text"
-              name=""
-              placeholder="Title"
-              id="title"
-              required
-            />
-            <label for="expenseAmount">Please Enter Expense Amount</label>
+            <label for="title">Please Enter Your Expense Title</label>
+            <input type="text" name="title" placeholder="Title" id="title" />
+            <label for="expense">Please Enter Expense Amount</label>
             <input
               type="number"
-              name=""
-              id="expenseAmount"
+              name="expense"
+              id="expense"
               placeholder="$ Amount"
               value=""
-              required
             />
-            <button type="submit">Add Expense</button>
+            <button type="submit">Calculate</button>
           </form>
         </div>
       </div>
@@ -60,10 +51,8 @@
               <img src="https://img.icons8.com/color/48/null/cash.png" />
             </div>
             <div style="font-size: 40px; font-weight: 700; color: #316c5e">
-              <span>$</span><span id="budget">0</span>
+              <span>$</span><span id="_budget">0</span>
             </div>
-            <div>Expense title</div>
-            <div id="expense_title"></div>
           </div>
           <div class="rightCell expense">
             <div>EXPENSES</div>
@@ -73,10 +62,8 @@
               />
             </div>
             <div style="font-size: 40px; font-weight: 700; color: #713232">
-              <span>$</span><span id="expense">0</span>
+              <span>$</span><span id="_expense">0</span>
             </div>
-            <div>Expense Value</div>
-            <div id="expenseValue"></div>
           </div>
           <div class="rightCell balance">
             <div>BALANCE</div>
@@ -86,14 +73,16 @@
               />
             </div>
             <div style="font-size: 40px; font-weight: 700; color: #f0f8ff">
-              <span>$</span><span id="balance">0</span>
+              <span>$</span><span id="_balance">0</span>
             </div>
-            <div>icons</div>
           </div>
         </div>
       </div>
     </div>
-    <footer><img src="favicon.png" alt="Logo" width="50px" height="50px"/>Made by Fojan Babaali</footer>
+    <footer>
+      <img src="favicon.png" alt="Logo" width="50px" height="50px" />Made by
+      Fojan Babaali
+    </footer>
     <script src="app.js"></script>
   </body>
 </html>
