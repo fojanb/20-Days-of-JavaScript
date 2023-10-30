@@ -33,3 +33,4 @@ resetBtn.addEventListener("click", () => {
 window.addEventListener("load", () => {
   renderCells(cells);
 });
+
