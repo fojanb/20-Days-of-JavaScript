@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.eyes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px auto;
+}
+.eyes .left-eye,
+.eyes .right-eye {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: black;
+}
+.eyes .left-eye .pupil,
+.eyes .right-eye .pupil {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+.eyes .left-eye .pupil .eye-center,
+.eyes .right-eye .pupil .eye-center{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(72, 34, 3);
+    position: absolute;
+}
