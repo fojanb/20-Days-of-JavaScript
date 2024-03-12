@@ -1,19 +1,33 @@
-const minion = document.getElementById("minion");
-let count = 0;
+let pixelCounter = 0;
 const triggerEyes = (e) => {
-   if(e.clientX > e.clientY){
-    count+=1;
-    document.querySelectorAll(".eye-center").forEach(eye => {
-        eye.style.left = `${count}px`;
-    });
-   }else{
-    count-=1;
-    document.querySelectorAll(".eye-center").forEach(eye => {
-        eye.style.left = `${count}px`;
-    });
-
-   }
-    
-   
+    if(e.clientX > e.clientY && e.clientX < window.innerWidth / 2 && e.clientY < window.innerHeight / 2) {
+        console.log(pixelCounter)
+        document.querySelectorAll(".eye-center").forEach(eye => {
+            if (pixelCounter !== 30) {
+                pixelCounter+=1;
+                eye.style.right = `${pixelCounter}px`;
+                eye.style.top = `0px`;
+            }
+        });
+    }
+    if(e.clientX > e.clientY && e.clientX > window.innerWidth / 2 && e.clientY < window.innerHeight / 2){
+        console.log(pixelCounter)
+        document.querySelectorAll(".eye-center").forEach(eye => {
+            if (pixelCounter >= 0) {
+                pixelCounter-=1;
+                eye.style.right = `${pixelCounter}px`;
+                eye.style.top = `0px`;
+            }
+        });
+    }
+    if(e.clientX < e.clientY && e.clientX < window.innerWidth / 2 && e.clientY > window.innerHeight / 2){
+        document.querySelectorAll(".eye-center").forEach(eye => {
+            if (pixelCounter <= 30 && pixelCounter >= 0) {
+                pixelCounter-=1;
+                eye.style.left = `${pixelCounter}px`;
+                eye.style.top = `20px`;
+            }
+        });
+    }
 }
 window.addEventListener("mousemove", (e) => triggerEyes(e));

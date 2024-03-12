@@ -21,6 +21,9 @@
 }
 .eyes .left-eye .pupil,
 .eyes .right-eye .pupil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -32,6 +35,6 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: rgb(72, 34, 3);
+    background-color: rgb(0, 0, 0);
     position: absolute;
 }
