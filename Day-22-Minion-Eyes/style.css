@@ -3,11 +3,20 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-color: #0a75bc;
+}
+#minion{
+    background-color: #FCE029;
+}
 .eyes{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 150px auto;
+    background-color: #000000;
+    width: 30%;
+    height: 50px;
 }
 .eyes .left-eye,
 .eyes .right-eye {
@@ -17,7 +26,7 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: black;
+    background-color: #949699;
 }
 .eyes .left-eye .pupil,
 .eyes .right-eye .pupil {
