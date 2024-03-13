@@ -1,25 +1,30 @@
 let pixelCounter = 0;
+let threshold = {
+    X: window.innerWidth / 2,
+    Y: window.innerHeight / 2
+}
+const setEyePosition = (targetEye,pixels) => {
+    targetEye.style.right = `${pixels}px`;
+    targetEye.style.top = "0px";
+}
 const triggerEyes = (e) => {
-    if(e.clientX > e.clientY && e.clientX < window.innerWidth / 2 && e.clientY < window.innerHeight / 2) {
-        console.log(pixelCounter)
+    let { clientX, clientY } = e;
+    let clientYlessThanThresholdY = clientY < threshold.Y;
+    let clientYlessThanClientX = clientX > clientY;
+    let topRegion = clientYlessThanClientX && clientYlessThanThresholdY;
+    if (topRegion) {
+        clientX < threshold.X ? 
         document.querySelectorAll(".eye-center").forEach(eye => {
             if (pixelCounter !== 30) {
-                pixelCounter+=1;
-                eye.style.right = `${pixelCounter}px`;
-                eye.style.top = `0px`;
+                pixelCounter += 1;
+                setEyePosition(eye,pixelCounter);
             }
-        });
-    }
-    if(e.clientX > e.clientY && e.clientX > window.innerWidth / 2 && e.clientY < window.innerHeight / 2){
-        console.log(pixelCounter)
-        document.querySelectorAll(".eye-center").forEach(eye => {
+        }) : document.querySelectorAll(".eye-center").forEach(eye => {
             if (pixelCounter >= 0) {
-                pixelCounter-=1;
-                eye.style.right = `${pixelCounter}px`;
-                eye.style.top = `0px`;
+                pixelCounter -= 1;
+                setEyePosition(eye,pixelCounter);
             }
         });
     }
-  
 }
 window.addEventListener("mousemove", (e) => triggerEyes(e));
