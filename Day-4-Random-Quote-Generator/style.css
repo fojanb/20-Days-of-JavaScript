@@ -15,20 +15,20 @@ body {
 .container button {
   border-radius: 5px;
   padding: 10px;
-  background-color: #006f57;
+  background-color: #448e7e;
   color: #2b2d42;
   border: none;
   font-weight: bold;
+  cursor: pointer;
 }
-.quote {
-  background-color: #2b2d42;
+.card {
+  background-color: #53567a;
   width: 50%;
   height: max-content;
   border-radius: 10px;
   margin-top: 10px;
   padding: 20px;
-  color: whitesmoke;
-  opacity: 0.7;
+  color: rgb(255, 255, 255);
   box-shadow: 0 4px 8px 0 rgba(3, 8, 70, 0.196),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font-style: italic;

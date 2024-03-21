@@ -4,4 +4,4 @@ const data = {
     document.body.classList.toggle("sun");
   },
 };
-data.modes.forEach((mode) => mode.addEventListener("click", data.toggler));
+data.modes.forEach(mode => mode.addEventListener("click", data.toggler));
