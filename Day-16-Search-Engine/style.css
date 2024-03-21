@@ -30,7 +30,7 @@ body {
   letter-spacing: 2px;
   font-weight: lighter;
 }
-#search_area input {
+form input {
   padding: 10px;
   border: none;
   border-radius: 5px;
