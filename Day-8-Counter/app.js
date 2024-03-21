@@ -4,8 +4,16 @@ const data = {
   counter: document.getElementById("counter"),
 };
 const operations = [
-  { name: data.subtraction, accumulator: (a, b) => { return a - b }, flag: (a) => { return a < 0 }, color: "#9e2a2b" },
-  { name: data.summation, accumulator: (a, b) => { return a + b }, flag: (a) => { return a > 0 }, color: "#006d77" }
+  { name: data.subtraction, 
+    accumulator: (a, b) => { return a - b }, 
+    flag: (a) => { return a < 0 }, 
+    color: "#9e2a2b" 
+  },
+  { name: data.summation, 
+    accumulator: (a, b) => { return a + b }, 
+    flag: (a) => { return a > 0 }, 
+    color: "#006d77" 
+  }
 ];
 const checkForZero = (numberZero) => {
   if (parseInt(numberZero.innerText) == 0) {
