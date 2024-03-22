@@ -3,7 +3,7 @@ const form = document.querySelector("form");
 const imagesHolder = document.createElement("div");
 imagesHolder.classList.add("imagesHolder");
 const options = {
-  headers: { Authorization: "Client-ID viAzAfoivZobXMdC197TdaT2qFhnKr2iLse4MnuuDPc" }
+  headers: { Authorization: `Client-ID ${YOUR_API_KEY}` }
 };
 const makeGallery = (images) => {
   if (!images) {
