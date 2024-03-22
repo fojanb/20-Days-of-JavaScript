@@ -1,31 +1,35 @@
 const searchInput = document.getElementById("search");
 const form = document.querySelector("form");
-const holder = document.createElement("div");
-holder.classList.add("holder");
+const imagesHolder = document.createElement("div");
+imagesHolder.classList.add("imagesHolder");
 const options = {
-  headers: {Authorization: "Client-ID viAzAfoivZobXMdC197TdaT2qFhnKr2iLse4MnuuDPc"}
+  headers: { Authorization: "Client-ID viAzAfoivZobXMdC197TdaT2qFhnKr2iLse4MnuuDPc" }
 };
 const makeGallery = (images) => {
-  if(!images){
-    alert("Ooppssie something went wrong");
+  if (!images) {
+    alert("Something went wrong. Please try again.");
     return;
   }
-  holder.innerText = images.map(image => {
-    `<div class="frame">
-      <img src=${image.alt_description} id=${image.id} alt=${image.alt_description} title=${image.alt_description}/>
+  let renderedImages = images.map(image => {
+    return `<div class="frame">
+      <img src=${image.urls.regular} id=${image.id} alt=${image.alt_description} title=${image.alt_description}/>
       <span>${image.alt_description}</span>
     </div>`
-  }).join("");
-  console.log(holder)
-  document.body.append(holder)
+  });
+  imagesHolder.innerHTML = renderedImages.join("");
+  document.querySelector(".wrapper").insertAdjacentElement("beforeend", imagesHolder)
 };
 const getImage = async (e) => {
-  e.preventDefault();
-  holder.innerHTML = null;
-  const response = await fetch(`https://api.unsplash.com/search/photos?page=1&query=${searchInput.value}`, options);
-  const data = await response.json();
-  makeGallery(data.results)
-  searchInput.value="";
+  try {
+    e.preventDefault();
+    imagesHolder.innerHTML = null;
+    const response = await fetch(`https://api.unsplash.com/search/photos?page=1&query=${searchInput.value}`, options);
+    const data = await response.json();
+    makeGallery(data.results)
+    searchInput.value = "";
+  } catch (error) {
+    console.error(error)
+  }
 };
 window.addEventListener("load", () => {
   form.addEventListener("submit", getImage);
