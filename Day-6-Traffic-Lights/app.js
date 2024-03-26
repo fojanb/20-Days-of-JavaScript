@@ -1,29 +1,26 @@
-const data = {
+const trafficLightColors = {
   red: document.querySelector("#red"),
   yellow: document.querySelector("#yellow"),
   green: document.querySelector("#green"),
 };
 const startTrafficSignal = () => {
-  data.green.classList.add("green");
-  setTimeout(function () {
-    data.green.classList.remove("green");
-    data.red.classList.remove("red");
-    data.yellow.classList.add("yellow");
+  trafficLightColors.green.classList.add("green");
+  setTimeout(() => {
+    trafficLightColors.green.classList.remove("green");
+    trafficLightColors.red.classList.remove("red");
+    trafficLightColors.yellow.classList.add("yellow");
   }, 1000);
-  setTimeout(function () {
-    data.green.classList.remove("green");
-    data.red.classList.add("red");
-    data.yellow.classList.remove("yellow");
+  setTimeout(() => {
+    trafficLightColors.green.classList.remove("green");
+    trafficLightColors.red.classList.add("red");
+    trafficLightColors.yellow.classList.remove("yellow");
   }, 2000);
-  setTimeout(function () {
-    data.green.classList.add("green");
-    data.red.classList.remove("red");
-    data.yellow.classList.remove("yellow");
+  setTimeout(() => {
+    trafficLightColors.green.classList.add("green");
+    trafficLightColors.red.classList.remove("red");
+    trafficLightColors.yellow.classList.remove("yellow");
   }, 3000);
 };
-
-var timer = setInterval(function () {
-  startTrafficSignal();
-}, 3000);
-
+var timer = setInterval(startTrafficSignal() , 3000);
 startTrafficSignal();
+
