@@ -22,7 +22,7 @@ const makeGallery = (images) => {
 const getImage = async (e) => {
   try {
     e.preventDefault();
-    imagesHolder.innerHTML = null;
+    imagesHolder.innerHTML = "";
     const response = await fetch(`https://api.unsplash.com/search/photos?page=1&query=${searchInput.value}`, options);
     const data = await response.json();
     makeGallery(data.results)
