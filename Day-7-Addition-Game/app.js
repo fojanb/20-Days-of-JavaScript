@@ -22,10 +22,11 @@ const checkAnswer = () => {
   if (data.res == parseInt(data.result.value)) {
     alert("Correct!");
     updateState();
-  } else {
-    alert(`Sorry, Incorrect. The correct answer was : ${data.res}`);
-    updateState();
-  }
+    return;
+  } 
+  alert(`Sorry, Incorrect. The correct answer was : ${data.res}`);
+  updateState();
+  
 }
 const result = (n1, n2) => {
   data.res = parseInt(n1.innerText) + parseInt(n2.innerText);
