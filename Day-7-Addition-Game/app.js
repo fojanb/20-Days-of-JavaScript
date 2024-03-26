@@ -26,7 +26,6 @@ const checkAnswer = () => {
   } 
   alert(`Sorry, Incorrect. The correct answer was : ${data.res}`);
   updateState();
-  
 }
 const result = (n1, n2) => {
   data.res = parseInt(n1.innerText) + parseInt(n2.innerText);
