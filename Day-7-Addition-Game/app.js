@@ -15,25 +15,22 @@ const updateState = () => {
   result(data.num1, data.num2);
 };
 const checkAnswer = () => {
-  data.btn.addEventListener("click", () => {
-    if (!data.result.value) {
-      alert("You did not type any result yet...");
-      return;
-    }
-    if (data.res == parseInt(data.result.value)) {
-      alert("Correct!");
-      updateState();
-    } else {
-      alert(`Sorry, Incorrect. The correct answer was : ${data.res}`);
-      updateState();
-    }
-  });
-};
+  if (!data.result.value) {
+    alert("You did not type any result yet...");
+    return;
+  }
+  if (data.res == parseInt(data.result.value)) {
+    alert("Correct!");
+    updateState();
+  } else {
+    alert(`Sorry, Incorrect. The correct answer was : ${data.res}`);
+    updateState();
+  }
+}
 const result = (n1, n2) => {
   data.res = parseInt(n1.innerText) + parseInt(n2.innerText);
 };
 window.addEventListener("load", () => {
-  numberGenerator();
-  result(data.num1, data.num2);
-  checkAnswer();
+  updateState();
+  data.btn.addEventListener("click",checkAnswer);
 });
