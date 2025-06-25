@@ -1,33 +1,36 @@
 import { generateColor } from "./targetColor.js";
 import { table } from "./app.js";
 import { targetColor } from "./targetColor.js";
+
+let colorNumber = 10;
 let randomIndex = Math.floor(Math.random() * 10);
 let colorArray = [];
-const drawTable = () => {
-  for (let index = 0; index < 10; index++) {
+
+const generate_colors = () => {
+  for (let index = 0; index < colorNumber; index++) {
     colorArray.push(generateColor());
   }
-  colorArray[randomIndex] = targetColor.innerText;
+}
+
+const generate_circle = () => {
   colorArray.forEach((color, index) => {
     let circle = document.createElement("div");
     circle.setAttribute("id", `color-${index}`);
-    circle.style.backgroundColor = color;
-    circle.style.width = "50px";
-    circle.style.height = "50px";
-    circle.style.borderRadius = "50%";
-    circle.style.border = "1px solid gray";
-    circle.style.cursor = "pointer";
-    circle.style.margin = "10px";
+    circle.style.backgroundColor = `${color}`;
+    circle.classList.add("general");
     table.append(circle);
   });
-  document.querySelectorAll(`[id^="color-"]`).forEach((color) => {
+}
+
+const drawTable = () => {
+  generate_colors();
+  colorArray[randomIndex] = targetColor.innerText;
+  generate_circle();
+  document.querySelectorAll(`[id^="color-"]`).forEach(color => {
     color.addEventListener("click", (e) => {
-      if (e.target.style.backgroundColor === targetColor.innerText) {
-        alert("Yay! (^_^)");
-      } else {
-        alert("Oops... (-_-)");
-      }
+      e.target.style.backgroundColor === targetColor.innerText ? alert("Yay! (^_^)") : alert("Oops... (-_-)");
     });
   });
 };
+
 export { drawTable };

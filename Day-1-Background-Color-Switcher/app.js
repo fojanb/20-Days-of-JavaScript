@@ -1,15 +1,5 @@
-const data = {
-  circles: document.querySelectorAll("#circles div"),
-  mainScreen: document.querySelector("html"),
+const circles = document.querySelectorAll(".circle");
+const changeScreenColor = (e) => {
+  document.querySelector("html").style.backgroundColor = e.target.style.backgroundColor;
 };
-const handleClick = (e) => {
-  data.mainScreen.style.backgroundColor = e.target.style.backgroundColor;
-};
-const screenColor = () => {
-  data.circles.forEach((circle) =>
-    circle.addEventListener("click", handleClick)
-  );
-};
-window.addEventListener("load", () => {
-  screenColor();
-});
+circles.forEach(circle => circle.addEventListener("click", changeScreenColor));

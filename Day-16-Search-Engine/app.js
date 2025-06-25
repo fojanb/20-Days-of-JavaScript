@@ -1,41 +1,36 @@
-import { API_KEY_1, API_KEY_2 } from "./myapikeys.js";
 const searchInput = document.getElementById("search");
-const searchButton = document.querySelector("button");
-const holder = document.createElement("div");
-holder.classList.add("holder");
+const form = document.querySelector("form");
+const imagesHolder = document.createElement("div");
+imagesHolder.classList.add("imagesHolder");
 const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": API_KEY_1,
-    "X-RapidAPI-Host": API_KEY_2,
-  },
+  headers: { Authorization: `Client-ID ${YOUR_API_KEY}` }
 };
 const makeGallery = (images) => {
-  images.forEach((image, index) => {
-    const frame = document.createElement("div");
-    const img = document.createElement("img");
-    const title = document.createElement("span");
-    title.innerText = image.title;
-    frame.classList.add("frame");
-    img.src = image.thumbnail;
-    img.alt = image.title;
-    img.setAttribute("id", index);
-    frame.append(img,title);
-    holder.append(frame);
-    document.body.append(holder)
+  if (!images) {
+    alert("Something went wrong. Please try again.");
+    return;
+  }
+  let renderedImages = images.map(image => {
+    return `<div class="frame">
+      <img src=${image.urls.regular} id=${image.id} alt=${image.alt_description} title=${image.alt_description}/>
+      <span>${image.alt_description}</span>
+    </div>`
   });
+  imagesHolder.innerHTML = renderedImages.join("");
+  document.querySelector(".wrapper").insertAdjacentElement("beforeend", imagesHolder)
 };
-const getImage = async () => {
-  holder.innerHTML = null;
-  let data = await fetch(
-    `https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/ImageSearchAPI?q=${searchInput.value}&pageNumber=1&pageSize=10&autoCorrect=true`,
-    options
-  ).then((response) => response.json());
-  console.log(data.value);
-  makeGallery(data.value);
-  searchInput.value="";
+const getImage = async (e) => {
+  try {
+    e.preventDefault();
+    imagesHolder.innerHTML = "";
+    const response = await fetch(`https://api.unsplash.com/search/photos?page=1&query=${searchInput.value}`, options);
+    const data = await response.json();
+    makeGallery(data.results)
+    searchInput.value = "";
+  } catch (error) {
+    console.error(error)
+  }
 };
 window.addEventListener("load", () => {
-  searchButton.addEventListener("click", getImage);
-
+  form.addEventListener("submit", getImage);
 });

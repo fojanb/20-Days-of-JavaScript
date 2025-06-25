@@ -30,7 +30,7 @@ body {
   letter-spacing: 2px;
   font-weight: lighter;
 }
-#search_area input {
+form input {
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -49,7 +49,7 @@ button:hover {
   background-color: var(--pink-clr);
   color: #fff;
 }
-.holder {
+.imagesHolder {
   display: grid;
   grid-template-columns: repeat(4, 300px);
   grid-template-rows: auto;
@@ -59,7 +59,7 @@ button:hover {
   justify-content: center;
 }
 @media screen and (max-width: 800px) {
-  .holder {
+  .imagesHolder {
     grid-template-columns: repeat(1, 300px);
     margin: 0 auto;
     grid-gap: 5px;
@@ -67,14 +67,14 @@ button:hover {
 }
 
 @media screen and (min-width: 700px) and (max-width: 900px) {
-  .holder {
+  .imagesHolder {
     grid-template-columns: repeat(2, 300px);
     margin: 0 auto;
     grid-gap: 5px;
   }
 }
 @media screen and (min-width: 900px) and (max-width: 1200px) {
-  .holder {
+  .imagesHolder {
     grid-template-columns: repeat(3, 300px);
     margin: 0 auto;
     grid-gap: 5px;
@@ -105,13 +105,4 @@ button:hover {
   bottom: 0;
   margin: 20px;
 }
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #7a859c;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -150px;
-}
+
