@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: burlywood;
+}
+div {
+  display: flex;
+  flex-direction: row;
+  margin:30px 20px;
+}
+.hidden{
+    display: none;
+}
